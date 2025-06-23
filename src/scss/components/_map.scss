@@ -1,0 +1,25 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+#map {
+    width: 100%;
+    height: 45vh;
+    
+    
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 30vh !important; /* Уменьшаем высоту карты */
+    }
+    
+    /* Упрощаем элементы управления на мобильных */
+    .ymaps-2-1-79-controls__toolbar_right {
+        display: none;
+    }
+    
+    /* Увеличиваем область клика для меток */
+    .ymaps-2-1-79-placemark-overlay {
+        transform: scale(1.3);
+    }
+}

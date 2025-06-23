@@ -1,0 +1,45 @@
+@use "sass:color";
+@use "sass:map";
+
+@mixin respond-to($breakpoint) {
+  // Карта брейкпоинтов
+  $breakpoints: (
+    'xs': 480px,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px,
+    'xxl2': 1700px,
+    'phone': 480px,
+    'tablet': 768px,
+    'desktop': 992px,
+    'mobile': 768px
+  );
+
+  // Проверяем существует ли брейкпоинт в карте (новый синтаксис)
+  @if map.has-key($breakpoints, $breakpoint) {
+    // Получаем значение брейкпоинта (новый синтаксис)
+    $value: map.get($breakpoints, $breakpoint);
+    
+    // Создаем медиазапрос
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Неизвестный брейкпоинт `#{$breakpoint}`. Используйте один из: #{map.keys($breakpoints)}";
+  }
+}
+
+
+@mixin hover-effect($color) {
+  &:hover {
+    background-color: color.scale($color, $lightness: -30%);
+  }
+}
+
+@mixin hover-effect-color($color) {
+  &:hover {
+    color: color.scale($color, $lightness: -30%);
+  }
+}
