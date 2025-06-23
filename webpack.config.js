@@ -53,7 +53,8 @@ module.exports = {
         test: /\.(png|jpg|jpe?g|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name][hash][ext][query]'
+          filename: 'img/[name][ext]',
+          publicPath: '/',
         }
       },
       {
@@ -64,30 +65,28 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-    template: './src/pages/index.html',
-    filename: 'index.html',
-  }),
+      template: './src/pages/index.html',
+      filename: 'index.html',
+    }),
 
-  // Остальные страницы
-  ...otherPages.map(page => new HtmlWebpackPlugin({
-    template: `./src/pages/${page}`,
-    filename: page,
-  })),
+    // Остальные страницы
+    ...otherPages.map(page => new HtmlWebpackPlugin({
+      template: `./src/pages/${page}`,
+      filename: page,
+    })),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: 'src/img',
-          to: 'img',
+          from: 'src/img/**/*',  // Рекурсивно копируем всё внутри img/
+          to: 'img/[name][ext]',
           noErrorOnMissing: true,
-          globOptions: {
-            ignore: ['**/.DS_Store']
-          }
         }
       ]
     })
+
 
   ],
   devServer: {
@@ -95,8 +94,12 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
       watch: true,
     },
-    hot: true,
+    hot: false,
     open: true,
+    devMiddleware: {
+      writeToDisk: true, // Записывает файлы на диск
+    },
+    watchFiles: ['src/**/*'], // Следит за изменениями
     port: 8080,
     client: {
       overlay: {
