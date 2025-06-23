@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  font-family: 'Muller-Trial-Regular';
   overflow-x:hidden;
   margin: 0;
   padding: 0;
@@ -49,4 +50,10 @@ body {
 
 #back-to-top::after {
   content: "↑";
+}
+
+
+.container {
+  padding-left: 18vw;
+  padding-right: 18vw;
 }

@@ -9,5 +9,51 @@
 @use 'components/map';
 
 
+@font-face {
+    font-family: Muller-Trial-BoldItalic;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/fonts/Muller-Trial-BoldItalic.woff2") format("woff2");
+}
 
+@font-face {
+    font-family: Muller-Trial-Bold;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/fonts/Muller-Trial-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Muller-Trial-RegularItalic;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/fonts/Muller-Trial-RegularItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Muller-Trial-Regular;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/fonts/Muller-Trial-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Muller-Trial-LightItalic;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/fonts/Muller-Trial-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Muller-Trial-Light;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/fonts/Muller-Trial-Light.woff2") format("woff2");
+}
 
