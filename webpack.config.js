@@ -20,6 +20,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'posthtml-loader',
+            options: {
+              plugins: [
+                require('posthtml-include')({
+                  root: 'src/pages/', // Папка с компонентами
+                }),
+              ],
+            },
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: [
           MiniCssExtractPlugin.loader,
