@@ -1,0 +1,195 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.expectations {
+    height: 1112px;
+    background-color: #E5E4DF75;
+
+    &__title {
+        font-size: 40px;
+        padding: 50px 0px;
+    }
+
+
+    &__blocks {
+        height: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "block1 block2 block5 block6"
+            "block3 block4 block5 block6"
+            "block7 block7 block8 block8"
+            "block9 block10 block11 block11";
+        font-size: 24px;
+        gap: 30px;
+        vertical-align: middle;
+
+
+
+        &__title {
+            font-family: 'Muller-Trial-Bold';
+            padding-top: 10px;
+        }
+
+
+        &__description {
+            font-family: 'Muller-Trial-LightItalic';
+            padding-bottom: 10px;
+        }
+
+        &__block1 {
+            grid-area: block1;
+            background-color: #8D725D;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            background: -webkit-linear-gradient(45deg, rgb(179, 144, 118), rgb(102, 83, 67));
+            background: -moz-linear-gradient(45deg, rgb(179, 144, 118), rgb(102, 83, 67));
+            background: linear-gradient(45deg, rgb(179, 144, 118), rgb(102, 83, 67));
+            transform: scale(1.1);
+            -webkit-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+            -moz-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+            box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+        }
+
+        &__block2 {
+            grid-area: block2;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__block3 {
+            grid-area: block3;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__block4 {
+            grid-area: block4;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__block5 {
+            grid-area: block5;
+            background-color: $primary-color;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 0 auto;
+            background: -webkit-linear-gradient(45deg, rgb(179, 144, 118), rgb(102, 83, 67));
+            background: -moz-linear-gradient(45deg, rgb(179, 144, 118), rgb(102, 83, 67));
+            background: linear-gradient(45deg, rgb(179, 144, 118), rgb(102, 83, 67));
+
+            transform: scale(1.05);
+            -webkit-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+            -moz-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+            box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+
+
+        }
+
+        &__block6 {
+            grid-area: block6;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        &__block7 {
+            grid-area: block7;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__block8 {
+            grid-area: block8;
+            background-color: $secondary-color;
+            color: #fff;
+            padding: 20px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            transform: scale(1.05);
+            -webkit-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+            -moz-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+            box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7);
+        }
+
+        &__block9 {
+            grid-area: block9;
+            background-color: #E5E4DF;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            -webkit-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7) inset;
+            -moz-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7) inset;
+            box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7) inset;
+        }
+
+        &__block10 {
+            grid-area: block10;
+            background-color: #E5E4DF;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            -webkit-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7) inset;
+            -moz-box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7) inset;
+            box-shadow: 0px 16px 15px -4px rgba(50, 55, 58, 0.7) inset;
+        }
+
+        &__block11 {
+            grid-area: block11;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+}

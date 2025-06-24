@@ -1,0 +1,115 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.tariff {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
+
+    &__title {
+        padding-top: 40px;
+        font-size: 40px;
+    }
+
+
+    &__cards {
+        display: flex;
+        gap: 20px;
+
+
+        &__title {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+
+            &__text {
+                font-size: 24px;
+            }
+
+
+            &__status {
+                background-color: #C36565;
+                border-radius: 10px;
+                color: #fff;
+                padding: 7px;
+                display: flex;
+                gap: 4px;
+                align-items: center;
+            }
+        }
+
+
+        &__description {
+            font-size: 18px;
+            color: gray;
+
+        }
+
+        &__full_description {
+            font-size: 18px;
+        }
+
+
+
+        &__ul {
+            font-size: 18px;
+        }
+
+
+
+
+        &__li {}
+
+
+
+        &__image {}
+
+
+        &__price_info {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid;
+        border-radius: 20px;
+        border-color: $primary-color;
+        padding: 20px;
+    }
+}
+
+.price_info {
+
+
+    &__text {
+
+
+        &__price {
+            font-size: 24px;
+        }
+
+
+
+        &__comment {
+            font-size: 14px;
+            color: gray;
+        }
+    }
+
+
+    &__button {}
+
+}

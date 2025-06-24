@@ -30,6 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  window.addEventListener('scroll', function () {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+    backToTopButton.style.bottom = '100px';
+  }
+  else {
+    backToTopButton.style.bottom = '20px';
+  }
+  });
+
   // Инициализация - скрываем кнопку при загрузке, если мы уже вверху
   document.addEventListener('DOMContentLoaded', function () {
     const backToTopButton = document.getElementById('back-to-top');

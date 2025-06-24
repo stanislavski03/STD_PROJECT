@@ -1,0 +1,90 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+
+.after_course {
+    height: 806px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap: 70px;
+
+
+
+
+    &__textblock {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+
+    &__title {
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+
+
+    &__description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+
+
+        &__img {}
+
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+
+    &__main {
+        display: flex;
+        padding-top: 50px;
+        align-items: center;
+
+        &__text {
+            font-size: 40px;
+            color: #13656B;
+            font-family: 'Muller-Trial-LightItalic';
+        }
+
+        &__img {
+            position: relative;
+            top: -60px;
+            left: 15px;
+            width: 40%;
+        }
+    }
+
+
+    &__image_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid;
+        border-color: gray;
+        border-radius: 20px;
+        padding: 20px;
+        gap: 20px;
+
+
+        &__img {}
+
+
+        &__text {
+            font-size: 18px;
+            display: flex;
+        }
+    }
+
+
+
+
+}

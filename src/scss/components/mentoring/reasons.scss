@@ -1,0 +1,44 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+
+.reasons {
+    height: 776px;
+    background-color: #353535;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05));
+
+    &__textblock {
+        color: #fff;
+        border: 1px solid;
+        border-color: $primary-color;
+        border-radius: 24px;
+        padding: 80px;
+
+
+        &__title {
+            font-size: 54px;
+        }
+
+        &__description {
+            font-size: 20px;
+        }
+    }
+
+    &__image {
+        position: relative;
+        left: -20px;
+    }
+
+    &__vector {
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        pointer-events: none;
+        left: 368px;
+        top: 271px;
+    }
+}
