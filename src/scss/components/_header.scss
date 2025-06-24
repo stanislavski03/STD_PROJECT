@@ -12,7 +12,7 @@
     transition: all 0.3s ease;
     z-index: 1000;
 
-    &-content {
+    &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,25 +22,25 @@
         position: relative;
     }
 
-    .nav-section {
+    &__nav-section {
         display: flex;
         gap: 15px;
         flex: 1;
         justify-content: flex-start;
     }
 
-    .logo {
+    &__logo {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
 
-        img {
+        &-image {
             height: 75px;
             transition: filter 0.3s ease;
         }
     }
 
-    .contacts-section {
+    &__contacts-section {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -48,7 +48,7 @@
         justify-content: flex-end;
     }
 
-    .nav-button {
+    &__nav-button {
         background: transparent;
         border: none;
         color: rgb(0, 0, 0);
@@ -63,7 +63,7 @@
         }
     }
 
-    .phone-link {
+    &__phone-link {
         background: transparent;
         border: none;
         color: rgb(0, 0, 0);
@@ -76,11 +76,11 @@
         }
     }
 
-    .contact-button {
+    &__contact-button {
         background: transparent;
         color: black;
-        border-color: black;
-        padding: 10px 40px 10px 40px;
+        border: 1px solid black;
+        padding: 10px 40px;
         border-radius: 100px;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -91,16 +91,14 @@
         }
     }
 
-    &.scrolled {
+    &--scrolled {
         top: 0;
         background-color: white;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         padding: 25px 0;
 
-
-        .logo img {
+        .header__logo-image {
             filter: brightness(0);
         }
     }
 }
-
