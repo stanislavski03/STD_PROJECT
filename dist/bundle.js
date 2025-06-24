@@ -412,11 +412,7 @@ eval("module.exports = \"data:application/font-woff;charset=utf-8;base64, d09GRg
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("bccf03718c9dec2683e3")
-=======
-/******/ 		__webpack_require__.h = () => ("bbbff2dcc65e1f195aeb")
->>>>>>> 5c33edeaf1efbe76eeca7e12e6b3bae80fef75c8
+/******/ 		__webpack_require__.h = () => ("10b2c80f1ce9c2d76e45")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
