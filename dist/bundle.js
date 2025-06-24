@@ -303,6 +303,16 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 
 /***/ }),
 
+/***/ "./src/js/header.js":
+/*!**************************!*\
+  !*** ./src/js/header.js ***!
+  \**************************/
+/***/ (() => {
+
+eval("document.addEventListener('DOMContentLoaded', () => {\r\n    const header = document.querySelector('.header'); \r\n    \r\n    window.addEventListener('scroll', function() {\r\n        if (window.scrollY > 50) {\r\n            header.classList.add('scrolled');\r\n        } else {\r\n            header.classList.remove('scrolled');\r\n        }\r\n    });\r\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/header.js?");
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -310,7 +320,7 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ \"./node_modules/swiper/swiper.css\");\n/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./map */ \"./src/js/map.js\");\n/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_map__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n\r\n\r\n//КНОПКА ПРОКРУТКИ\r\n\r\n  document.getElementById('back-to-top').addEventListener('click', function () {\r\n    window.scrollTo({\r\n      top: 0,\r\n      behavior: 'smooth' // Плавная прокрутка\r\n    });\r\n  });\r\n\r\n  // Показываем/скрываем кнопку при прокрутке\r\n  window.addEventListener('scroll', function () {\r\n    const backToTopButton = document.getElementById('back-to-top');\r\n    if (window.pageYOffset > 300) {\r\n      backToTopButton.style.display = 'flex';\r\n    } else {\r\n      backToTopButton.style.display = 'none';\r\n    }\r\n  });\r\n\r\n  // Инициализация - скрываем кнопку при загрузке, если мы уже вверху\r\n  document.addEventListener('DOMContentLoaded', function () {\r\n    const backToTopButton = document.getElementById('back-to-top');\r\n    backToTopButton.style.display = window.pageYOffset > 300 ? 'flex' : 'none';\r\n  });\r\n\r\n\r\n\r\n  \r\n\r\n\r\n\r\n\r\n})\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://stdkit_project/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ \"./node_modules/swiper/swiper.css\");\n/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./map */ \"./src/js/map.js\");\n/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_map__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header */ \"./src/js/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n\r\n\r\n//КНОПКА ПРОКРУТКИ\r\n\r\n  document.getElementById('back-to-top').addEventListener('click', function () {\r\n    window.scrollTo({\r\n      top: 0,\r\n      behavior: 'smooth' // Плавная прокрутка\r\n    });\r\n  });\r\n\r\n  // Показываем/скрываем кнопку при прокрутке\r\n  window.addEventListener('scroll', function () {\r\n    const backToTopButton = document.getElementById('back-to-top');\r\n    if (window.pageYOffset > 300) {\r\n      backToTopButton.style.display = 'flex';\r\n    } else {\r\n      backToTopButton.style.display = 'none';\r\n    }\r\n  });\r\n\r\n  // Инициализация - скрываем кнопку при загрузке, если мы уже вверху\r\n  document.addEventListener('DOMContentLoaded', function () {\r\n    const backToTopButton = document.getElementById('back-to-top');\r\n    backToTopButton.style.display = window.pageYOffset > 300 ? 'flex' : 'none';\r\n  });\r\n\r\n\r\n\r\n  \r\n\r\n\r\n\r\n\r\n})\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://stdkit_project/./src/js/main.js?");
 
 /***/ }),
 
@@ -402,7 +412,7 @@ eval("module.exports = \"data:application/font-woff;charset=utf-8;base64, d09GRg
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("59c08250d891f00b5dc4")
+/******/ 		__webpack_require__.h = () => ("c5d80f8899e9559d0b2f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

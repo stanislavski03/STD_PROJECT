@@ -2,7 +2,7 @@ import '../scss/main.scss';
 import Swiper from 'swiper';
 import 'swiper/css';
 import './map';
-
+import './header';
 
 
 
