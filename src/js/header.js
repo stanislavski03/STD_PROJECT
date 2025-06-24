@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+            header.classList.add('header--scrolled');
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove('header--scrolled');
         }
     });
 });

@@ -309,7 +309,7 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
   \**************************/
 /***/ (() => {
 
-eval("document.addEventListener('DOMContentLoaded', () => {\r\n    const header = document.querySelector('.header'); \r\n    \r\n    window.addEventListener('scroll', function() {\r\n        if (window.scrollY > 50) {\r\n            header.classList.add('scrolled');\r\n        } else {\r\n            header.classList.remove('scrolled');\r\n        }\r\n    });\r\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/header.js?");
+eval("document.addEventListener('DOMContentLoaded', () => {\r\n    const header = document.querySelector('.header'); \r\n    \r\n    window.addEventListener('scroll', function() {\r\n        if (window.scrollY > 50) {\r\n            header.classList.add('header--scrolled');\r\n        } else {\r\n            header.classList.remove('header--scrolled');\r\n        }\r\n    });\r\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/header.js?");
 
 /***/ }),
 
@@ -412,7 +412,11 @@ eval("module.exports = \"data:application/font-woff;charset=utf-8;base64, d09GRg
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("bccf03718c9dec2683e3")
+=======
+/******/ 		__webpack_require__.h = () => ("bbbff2dcc65e1f195aeb")
+>>>>>>> 5c33edeaf1efbe76eeca7e12e6b3bae80fef75c8
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
