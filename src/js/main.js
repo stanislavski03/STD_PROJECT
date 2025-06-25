@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', function () {
     const backToTopButton = document.getElementById('back-to-top');
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
     backToTopButton.style.bottom = '90px';
   }
   else {

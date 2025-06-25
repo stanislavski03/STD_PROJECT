@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 html {
   scroll-behavior: smooth;
@@ -11,7 +12,7 @@ html {
 
 body {
   font-family: 'Muller-Trial-Regular';
-  overflow-x:hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +21,7 @@ body {
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  
+
 
 }
 
@@ -56,11 +57,17 @@ body {
 
 
 .container {
-  padding-left: 18vw;
-  padding-right: 18vw;
+  padding: 0 18vw;
+
+  @include respond-to('big_laptop') {
+    padding: 0 10vw;
+  }
+  @include respond-to('laptop') {
+    padding: 0 5vw;
+  }
 }
 
 .wrapper {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
