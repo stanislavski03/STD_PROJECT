@@ -1,0 +1,84 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.deco {
+    display: flex;
+    flex-direction: column;
+    height: auto; // Изменено на auto для лучшей адаптации
+    min-height: 500px; 
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap: 20px;
+    padding: 40px 20px; // Добавлены отступы для мобильных устройств
+    // &_room{
+    //     background-image: url('~@img/hauska/room.svg');
+    // }
+    &_decor-text {
+        font-family: Muller-Trial-Bold;
+        font-size: 60px;
+        color: black;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        text-align: center; // Добавлено для мобильных устройств
+    }
+
+    &_hauska-text {
+        font-family: Muller-Trial-LightItalic;
+        font-size: 32px;
+        color: black;
+        letter-spacing: 3px;
+        font-style: italic;
+        text-align: center; // Добавлено для мобильных устройств
+    }
+
+    // Адаптация для планшетов
+    @media (max-width: 1024px) {
+        min-height: 400px;
+        gap: 15px;
+
+        &_decor-text {
+            font-size: 48px;
+            letter-spacing: 1.5px;
+        }
+
+        &_hauska-text {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+    }
+
+    // Адаптация для мобильных устройств
+    @media (max-width: 768px) {
+        min-height: 300px;
+        gap: 10px;
+        padding: 30px 15px;
+
+        &_decor-text {
+            font-size: 36px;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        &_hauska-text {
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+    }
+
+    // Адаптация для маленьких мобильных устройств
+    @media (max-width: 480px) {
+        min-height: 250px;
+        gap: 8px;
+        padding: 20px 10px;
+
+        &_decor-text {
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        &_hauska-text {
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+$color-dark: #333;
+$color-light: #fff;
+$spacing-medium: 20px;
+$spacing-large: 40px;
+
+@mixin heading-style {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: $spacing-medium;
+}
+
+@mixin paragraph-style {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-hauska {
+  font-family: Muller-Trial-Bold;
+  color: $color-dark;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-medium;
+
+  &__header {
+    font-family: Muller-Trial-Bold;
+    font-size: 40px;
+      text-transform: uppercase;
+  }
+
+  &__description {
+    @include paragraph-style;
+    margin-bottom: $spacing-large;
+  }
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-large;
+  }
+
+  &__image {
+    width: 45%;
+    margin: 0 auto $spacing-medium;
+    padding-left: 375px;
+  }
+
+  &__content {
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
+  &__header {
+    font-family: Muller-Trial-Bold;
+    font-size: 40px;
+    margin-bottom: $spacing-medium;
+  }
+
+  &__intro {
+    font-family: Muller-Trial-Regular;
+    font-size: 30px;
+    margin-bottom: $spacing-medium;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: $spacing-medium;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
