@@ -1,38 +1,61 @@
+@use '../../variables' as *;
+
 .head {
-    background-color: rgb(93, 93, 93);
-    overflow: hidden;
-    position: relative;
+    background: #656565;
+    background-image: url('~@img/studio-design/head/head-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &__text {
-        &--h1 {}
-
-        &--h2 {}
-    }
-
-    &::after {
+    &::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('~src/img/studio-design/head-1.png'); // переносим сюда
+        background-image: url('~@img/studio-design/head/Shadow-head.svg');
+        opacity: 1;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-        z-index: 0;
+        z-index: 1;
+        filter: brightness(0.1);
+    }
 
-        &.loaded::after {
-            opacity: 1;
+    &__text {
+        position: relative;
+        z-index: 2;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &--h1 {
+            font-family: Muller-Trial-Bold;
+            font-size: 5rem;
+            margin: 0;
         }
 
-        &__text {
-            position: relative;
-            z-index: 1;
+        &--h2 {
+            font-family: Muller-Trial-Light;
+            font-size: 5rem;
+            margin: 0;
         }
     }
+}
+
+.button {
+    background-color: $secondary-color;
+    color: white;
+    font-family: Muller-Trial-Regular;
+    margin-top: 2%;
 }

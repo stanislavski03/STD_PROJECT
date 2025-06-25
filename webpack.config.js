@@ -3,10 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { watch } = require('fs');
 
 const pages = fs.readdirSync(path.resolve(__dirname, 'src/pages')).filter(file => file.endsWith('.html'));
-
 const otherPages = pages.filter(page => page !== 'index.html');
 
 module.exports = {
@@ -16,6 +14,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     publicPath: '/'
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    '@img': path.resolve(__dirname, 'src/img') // Обновленный алиас
+    }
   },
   module: {
     rules: [
@@ -30,7 +34,7 @@ module.exports = {
             options: {
               plugins: [
                 require('posthtml-include')({
-                  root: 'src/pages/', // Папка с компонентами
+                  root: 'src/pages/',
                 }),
               ],
             },
@@ -68,8 +72,6 @@ module.exports = {
       template: './src/pages/index.html',
       filename: 'index.html',
     }),
-
-    // Остальные страницы
     ...otherPages.map(page => new HtmlWebpackPlugin({
       template: `./src/pages/${page}`,
       filename: page,
@@ -80,14 +82,12 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: 'src/img/**/*',  // Рекурсивно копируем всё внутри img/
+          from: 'src/img/**/*',
           to: 'img/[name][ext]',
           noErrorOnMissing: true,
         }
       ]
     })
-
-
   ],
   devServer: {
     static: {
@@ -97,9 +97,9 @@ module.exports = {
     hot: false,
     open: true,
     devMiddleware: {
-      writeToDisk: true, // Записывает файлы на диск
+      writeToDisk: true,
     },
-    watchFiles: ['src/**/*'], // Следит за изменениями
+    watchFiles: ['src/**/*'],
     port: 8080,
     client: {
       overlay: {
