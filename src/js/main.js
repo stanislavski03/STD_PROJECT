@@ -2,7 +2,7 @@ import '../scss/main.scss';
 import Swiper from 'swiper';
 import 'swiper/css';
 import './map';
-
+import './header';
 
 
 
@@ -28,6 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       backToTopButton.style.display = 'none';
     }
+  });
+
+  window.addEventListener('scroll', function () {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight) {
+    backToTopButton.style.bottom = '90px';
+  }
+  else {
+    backToTopButton.style.bottom = '20px';
+  }
   });
 
   // Инициализация - скрываем кнопку при загрузке, если мы уже вверху

@@ -5,10 +5,17 @@
 
 @use 'components/buttons';
 @use 'components/header';
+@use 'components/application';
 @use 'components/footer';
 @use 'components/map';
 @use 'components/mentoring/performance';
 @use 'components/mentoring/about';
+@use 'components/mentoring/reasons';
+@use 'components/mentoring/expectations';
+@use 'components/mentoring/after_course';
+@use 'components/mentoring/course_program';
+@use 'components/mentoring/offer';
+@use 'components/mentoring/tariff';
 
 @use 'components/design-studio/head';
 
@@ -22,12 +29,20 @@
     src: url("/src/assets/fonts/Muller-Trial-BoldItalic.woff2") format("woff2");
 }
 
+.Muller-Trial-BoldItalic {
+    font-family: 'Muller-Trial-BoldItalic';
+}
+
 @font-face {
     font-family: Muller-Trial-Bold;
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
     src: url("/src/assets/fonts/Muller-Trial-Bold.woff2") format("woff2");
+}
+
+.Muller-Trial-Bold {
+    font-family: 'Muller-Trial-Bold';
 }
 
 @font-face {
@@ -38,12 +53,20 @@
     src: url("/src/assets/fonts/Muller-Trial-RegularItalic.woff2") format("woff2");
 }
 
+.Muller-Trial-RegularItalic {
+    font-family: 'Muller-Trial-RegularItalic';
+}
+
 @font-face {
     font-family: Muller-Trial-Regular;
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
     src: url("/src/assets/fonts/Muller-Trial-Regular.woff2") format("woff2");
+}
+
+.Muller-Trial-Regular {
+    font-family: 'Muller-Trial-Regular';
 }
 
 @font-face {
@@ -54,11 +77,19 @@
     src: url("/src/assets/fonts/Muller-Trial-LightItalic.woff2") format("woff2");
 }
 
+.Muller-Trial-LightItalic {
+    font-family: 'Muller-Trial-LightItalic';
+}
+
 @font-face {
     font-family: Muller-Trial-Light;
     font-style: normal;
     font-weight: 100 900;
     font-display: swap;
     src: url("/src/assets/fonts/Muller-Trial-Light.woff2") format("woff2");
+}
+
+.Muller-Trial-Light {
+    font-family: 'Muller-Trial-Light';
 }
 
