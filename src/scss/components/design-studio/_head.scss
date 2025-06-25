@@ -1,0 +1,38 @@
+.head {
+    background-color: rgb(93, 93, 93);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    &__text {
+        &--h1 {}
+
+        &--h2 {}
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('~src/img/studio-design/head-1.png'); // переносим сюда
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: 0;
+
+        &.loaded::after {
+            opacity: 1;
+        }
+
+        &__text {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
