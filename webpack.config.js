@@ -3,10 +3,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const { watch } = require('fs');
+const webpack = require('webpack');
 
 const pages = fs.readdirSync(path.resolve(__dirname, 'src/pages')).filter(file => file.endsWith('.html'));
-
 const otherPages = pages.filter(page => page !== 'index.html');
 
 module.exports = {
@@ -22,20 +21,16 @@ module.exports = {
       {
         test: /\.html$/,
         use: [
-          {
-            loader: 'html-loader',
-          },
+          'html-loader',
           {
             loader: 'posthtml-loader',
             options: {
               plugins: [
-                require('posthtml-include')({
-                  root: 'src/pages/', // Папка с компонентами
-                }),
-              ],
-            },
-          },
-        ],
+                require('posthtml-include')({ root: 'src/pages/' })
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
@@ -47,32 +42,56 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        include: [
+          path.resolve(__dirname, 'node_modules/@fancyapps/ui'),
+          path.resolve(__dirname, 'node_modules/swiper')
+        ],
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.(png|jpg|jpe?g|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]',
-          publicPath: '/',
+          publicPath: '/'
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource'
-      },
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/pages/index.html',
-      filename: 'index.html',
+      filename: 'index.html'
     }),
-
-    // Остальные страницы
     ...otherPages.map(page => new HtmlWebpackPlugin({
       template: `./src/pages/${page}`,
-      filename: page,
+      filename: page
     })),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
@@ -80,26 +99,24 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: 'src/img/**/*',  // Рекурсивно копируем всё внутри img/
+          from: 'src/img/**/*',
           to: 'img/[name][ext]',
-          noErrorOnMissing: true,
+          noErrorOnMissing: true
         }
       ]
     })
-
-
   ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
-      watch: true,
+      watch: true
     },
     hot: false,
     open: true,
     devMiddleware: {
-      writeToDisk: true, // Записывает файлы на диск
+      writeToDisk: true
     },
-    watchFiles: ['src/**/*'], // Следит за изменениями
+    watchFiles: ['src/**/*'],
     port: 8080,
     client: {
       overlay: {
@@ -107,5 +124,11 @@ module.exports = {
         warnings: false
       }
     }
+  },
+  resolve: {
+    alias: {
+      '@fancyapps/ui': path.resolve(__dirname, 'node_modules/@fancyapps/ui')
+    },
+    extensions: ['.js', '.mjs', '.json']
   }
 };

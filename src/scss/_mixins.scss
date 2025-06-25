@@ -4,17 +4,15 @@
 @mixin respond-to($breakpoint) {
   // Карта брейкпоинтов
   $breakpoints: (
-    'xs': 480px,
-    'sm': 576px,
-    'md': 768px,
-    'lg': 992px,
-    'xl': 1200px,
-    'xxl': 1400px,
-    'xxl2': 1700px,
-    'phone': 480px,
+    'small_mobile': 320px,
+    'middle_mobile': 375px,
+    'big_mobile': 425px,
     'tablet': 768px,
-    'desktop': 992px,
-    'mobile': 768px
+    'laptop': 1024px,
+    'big_laptop': 1440px,
+    'before_desktop': 1919px,
+    'desktop': 1920px,
+    '4k': 2560px,
   );
 
   // Проверяем существует ли брейкпоинт в карте (новый синтаксис)
@@ -33,12 +31,14 @@
 
 
 @mixin hover-effect($color) {
+  transition: background-color 0.3s ease;
   &:hover {
     background-color: color.scale($color, $lightness: -30%);
   }
 }
 
 @mixin hover-effect-color($color) {
+  transition: color 0.3s ease;
   &:hover {
     color: color.scale($color, $lightness: -30%);
   }

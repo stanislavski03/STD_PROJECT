@@ -9,9 +9,30 @@
     align-items: stretch;
     gap: 30px;
 
+    @include respond-to('big_laptop') {
+        height: 1000px;
+    }
+
+
+    @include respond-to('laptop') {
+        height: 1000px;
+    }
+
+    @include respond-to('tablet') {
+        height: 650px;
+    }
+
     &__title {
         font-size: 40px;
         font-family: 'Muller-Trial-Bold';
+
+        @include respond-to('big_laptop') {
+            font-size: 30px;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 20px;
+        }
     }
 
 
@@ -21,11 +42,29 @@
         align-items: stretch;
         gap: 30px;
 
+        @include respond-to('big_laptop') {
+            gap: 20px;
+        }
+
+        @include respond-to('tablet') {
+            gap: 10px;
+        }
+
 
 
         &__item {
             padding: 30px;
             font-size: 30px;
+
+            @include respond-to('big_laptop') {
+                padding: 20px;
+                font-size: 24px;
+            }
+
+            @include respond-to('tablet') {
+                padding: 10px;
+                font-size: 16px;
+            }
 
 
             &--fill {
@@ -52,6 +91,28 @@
             display: flex;
             font-size: 40px;
             gap: 20px;
+
+            @include respond-to('big_laptop') {
+                font-size: 30px;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 20px;
+            }
+
+            @include respond-to('big_mobile') {
+                font-size: 12px;
+            }
+        }
+
+        &__img {
+            @include respond-to('big_laptop') {
+                width: 15%;
+            }
+
+            @include respond-to('tablet') {
+                width: 10%;
+            }
         }
 
 
@@ -74,6 +135,22 @@
             border: 1px solid;
             border-radius: 4px;
             padding-left: 20px;
+
+            @include respond-to('big_laptop') {
+                width: 300px;
+            }
+
+            @include respond-to('tablet') {
+                width: 200px;
+                height: 40px;
+                font-size: 12px;
+            }
+
+            @include respond-to('big_mobile') {
+                width: 150px;
+                height: 30px;
+                font-size: 8px;
+            }
         }
 
 

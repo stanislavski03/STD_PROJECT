@@ -11,26 +11,97 @@
     flex-direction: row;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05));
 
+    @include respond-to('laptop') {
+        height: 500px;
+    }
+
+    @include respond-to('big_mobile') {
+        height: 400px;
+    }
+
     &__textblock {
         color: #fff;
         border: 1px solid;
         border-color: $primary-color;
         border-radius: 24px;
-        padding: 80px;
+        padding: 60px;
+        padding-right: 60px;
+
+        @include respond-to('big_laptop') {
+            padding: 30px;
+            padding-right: 40px;
+        }
+
+        @include respond-to('tablet') {
+            padding: 20px;
+            padding-right: 30px;
+        }
+
+        @include respond-to('small_mobile') {
+            padding: 11px;
+            padding-right: 20px;
+        }
+
 
 
         &__title {
             font-size: 54px;
+
+            @include respond-to('big_laptop') {
+                font-size: 40px;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 20px;
+            }
+
+            @include respond-to('big_mobile') {
+                font-size: 16px;
+            }
+
+            @include respond-to('small_mobile') {
+                font-size: 14px;
+            }
         }
 
         &__description {
             font-size: 20px;
+
+            @include respond-to('big_laptop') {
+                font-size: 15px;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 13px;
+            }
+
+            @include respond-to('big_mobile') {
+                font-size: 8px;
+            }
+
         }
     }
 
     &__image {
         position: relative;
         left: -20px;
+
+        @include respond-to('big_laptop') {
+            width: 335px;
+        }
+
+        @include respond-to('tablet') {
+            width: 200px;
+        }
+
+        @include respond-to('big_mobile') {
+            width: 150px;
+            left: -6px;
+        }
+
+
+
+
     }
 
     &__vector {
@@ -38,7 +109,17 @@
         height: 60%;
         position: absolute;
         pointer-events: none;
-        left: 368px;
+        left: 18vw;
         top: 271px;
+
+        @include respond-to('big_laptop') {
+            left: 19vw;
+            top: 290px;
+        }
+
+        @include respond-to('laptop') {
+            display: none;
+        }
+
     }
 }
