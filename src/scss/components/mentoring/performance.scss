@@ -11,6 +11,16 @@
     gap: 30px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
 
+
+    @include respond-to('big_laptop') {
+        height: 500px;
+    }
+
+    @include respond-to('tablet') {
+        height: 400px;
+    }
+
+
     &__vector {
         width: 100%;
         height: 100%;
@@ -22,6 +32,18 @@
         font-family: 'Muller-Trial-Bold';
         font-size: 64px;
         text-align: center;
+
+        @include respond-to('laptop') {
+            font-size: 48px;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 36px;
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 24px;
+        }
     }
 
     &__description {
@@ -29,6 +51,18 @@
         font-size: 36px;
         text-align: center;
         max-width: 1000px;
+
+        @include respond-to('laptop') {
+            font-size: 30px;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 20px;
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 12px;
+        }
     }
 
     &__button {}

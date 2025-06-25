@@ -11,6 +11,23 @@
   padding: 20px 50px;
 
 
+  @include respond-to('big_laptop') {
+    font-size: 15px;
+    padding: 15px 25px;
+  }
+
+
+  @include respond-to('tablet') {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+
+  @include respond-to('big_mobile') {
+    font-size: 8px;
+    padding: 6px 10px;
+  }
+
+
   &--primary {
     background-color: $primary-color;
     color: #fff;

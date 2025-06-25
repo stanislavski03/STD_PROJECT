@@ -26,9 +26,7 @@ module.exports = {
       {
         test: /\.html$/,
         use: [
-          {
-            loader: 'html-loader',
-          },
+          'html-loader',
           {
             loader: 'posthtml-loader',
             options: {
@@ -51,30 +49,56 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        include: [
+          path.resolve(__dirname, 'node_modules/@fancyapps/ui'),
+          path.resolve(__dirname, 'node_modules/swiper')
+        ],
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.(png|jpg|jpe?g|gif|svg|webp)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]',
-          publicPath: '/',
+          publicPath: '/'
         }
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource'
-      },
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/pages/index.html',
-      filename: 'index.html',
+      filename: 'index.html'
     }),
     ...otherPages.map(page => new HtmlWebpackPlugin({
       template: `./src/pages/${page}`,
-      filename: page,
+      filename: page
     })),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
@@ -84,7 +108,7 @@ module.exports = {
         {
           from: 'src/img/**/*',
           to: 'img/[name][ext]',
-          noErrorOnMissing: true,
+          noErrorOnMissing: true
         }
       ]
     })
@@ -92,7 +116,7 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
-      watch: true,
+      watch: true
     },
     hot: false,
     open: true,
@@ -107,5 +131,11 @@ module.exports = {
         warnings: false
       }
     }
+  },
+  resolve: {
+    alias: {
+      '@fancyapps/ui': path.resolve(__dirname, 'node_modules/@fancyapps/ui')
+    },
+    extensions: ['.js', '.mjs', '.json']
   }
 };
