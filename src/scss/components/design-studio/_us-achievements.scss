@@ -1,0 +1,112 @@
+@use '../../mixins' as *;
+@use '../../variables' as *;
+
+.us-achievements {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        font-family: Muller-Trial-Bold;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 0 18vw;
+        text-align: center; // Выравнивание текста по центру
+
+        @include respond-to('big_laptop') {
+            padding: 0 10vw;
+        }
+
+        @include respond-to('laptop') {
+            padding: 0 5vw;
+        }
+
+        span {
+            font-family: Muller-Trial-LightItalic;
+        }
+    }
+}
+
+.USA-flexbox {
+    display: flex;
+    justify-content: center; // Центрируем контейнеры по горизонтали
+    width: 100%;
+    flex-grow: 1;
+    align-items: stretch;
+    padding: 0 18vw;
+    box-sizing: border-box;
+    margin: 0 auto; // Автоматические отступы по бокам
+
+    @include respond-to('big_laptop') {
+        padding: 0 10vw;
+    }
+
+    @include respond-to('laptop') {
+        padding: 0 5vw;
+        flex-wrap: wrap;
+        justify-content: space-around; // Равномерное распределение при переносе
+    }
+}
+
+.USA-container {
+    flex: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0 1rem;
+
+    img {
+        border-radius: 50%;
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+
+    &__header {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: Muller-Trial-Bold;
+        font-size: 1.5rem;
+        height: max-content;
+    }
+
+    &__text {
+        font-family: Muller-Trial-Light;
+        font-size: 1.1rem;
+    }
+
+}
+
+// Адаптация для мобильных устройств
+@include respond-to('laptop') {
+    .USA-container {
+        flex: 0 1 calc(50% - 4rem); // 2 колонки с большими отступами
+        margin-bottom: 2rem;
+    }
+
+    .us-achievements {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+@include respond-to('tablet') {
+    .USA-container {
+        flex: 0 1 100%; // 1 колонка
+        max-width: 300px; // Ограничение максимальной ширины
+    }
+
+    .USA-flexbox {
+        justify-content: center; // Центрируем в одну колонку
+    }
+}
