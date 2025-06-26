@@ -303,6 +303,39 @@ eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type
 
 /***/ }),
 
+/***/ "./src/img/furniture_salon_chain/salon_map/mark1.svg":
+/*!***********************************************************!*\
+  !*** ./src/img/furniture_salon_chain/salon_map/mark1.svg ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = \"/img/mark1.svg\";\n\n//# sourceURL=webpack://stdkit_project/./src/img/furniture_salon_chain/salon_map/mark1.svg?");
+
+/***/ }),
+
+/***/ "./src/img/furniture_salon_chain/salon_map/mark2.svg":
+/*!***********************************************************!*\
+  !*** ./src/img/furniture_salon_chain/salon_map/mark2.svg ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = \"/img/mark2.svg\";\n\n//# sourceURL=webpack://stdkit_project/./src/img/furniture_salon_chain/salon_map/mark2.svg?");
+
+/***/ }),
+
+/***/ "./src/img/furniture_salon_chain/salon_map/mark3.svg":
+/*!***********************************************************!*\
+  !*** ./src/img/furniture_salon_chain/salon_map/mark3.svg ***!
+  \***********************************************************/
+/***/ ((module) => {
+
+"use strict";
+eval("module.exports = \"/img/mark3.svg\";\n\n//# sourceURL=webpack://stdkit_project/./src/img/furniture_salon_chain/salon_map/mark3.svg?");
+
+/***/ }),
+
 /***/ "./src/js/header.js":
 /*!**************************!*\
   !*** ./src/js/header.js ***!
@@ -320,17 +353,39 @@ eval("document.addEventListener('DOMContentLoaded', function () {\n  var header 
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ \"./node_modules/swiper/swiper.css\");\n/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./map */ \"./src/js/map.js\");\n/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_map__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header */ \"./src/js/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  //КНОПКА ПРОКРУТКИ\n\n  document.getElementById('back-to-top').addEventListener('click', function () {\n    window.scrollTo({\n      top: 0,\n      behavior: 'smooth' // Плавная прокрутка\n    });\n  });\n\n  // Показываем/скрываем кнопку при прокрутке\n  window.addEventListener('scroll', function () {\n    var backToTopButton = document.getElementById('back-to-top');\n    if (window.pageYOffset > 300) {\n      backToTopButton.style.display = 'flex';\n    } else {\n      backToTopButton.style.display = 'none';\n    }\n  });\n  window.addEventListener('scroll', function () {\n    var backToTopButton = document.getElementById('back-to-top');\n    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {\n      backToTopButton.style.bottom = '90px';\n    } else {\n      backToTopButton.style.bottom = '20px';\n    }\n  });\n\n  // Инициализация - скрываем кнопку при загрузке, если мы уже вверху\n  document.addEventListener('DOMContentLoaded', function () {\n    var backToTopButton = document.getElementById('back-to-top');\n    backToTopButton.style.display = window.pageYOffset > 300 ? 'flex' : 'none';\n  });\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./src/scss/main.scss\");\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css */ \"./node_modules/swiper/swiper.css\");\n/* harmony import */ var _salon_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./salon_map */ \"./src/js/salon_map.js\");\n/* harmony import */ var _salon_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_salon_map__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _salon_swiper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./salon_swiper */ \"./src/js/salon_swiper.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header */ \"./src/js/header.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  //КНОПКА ПРОКРУТКИ\n\n  document.getElementById('back-to-top').addEventListener('click', function () {\n    window.scrollTo({\n      top: 0,\n      behavior: 'smooth' // Плавная прокрутка\n    });\n  });\n\n  // Показываем/скрываем кнопку при прокрутке\n  window.addEventListener('scroll', function () {\n    var backToTopButton = document.getElementById('back-to-top');\n    if (window.pageYOffset > 300) {\n      backToTopButton.style.display = 'flex';\n    } else {\n      backToTopButton.style.display = 'none';\n    }\n  });\n  window.addEventListener('scroll', function () {\n    var backToTopButton = document.getElementById('back-to-top');\n    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {\n      backToTopButton.style.bottom = '90px';\n    } else {\n      backToTopButton.style.bottom = '20px';\n    }\n  });\n\n  // Инициализация - скрываем кнопку при загрузке, если мы уже вверху\n  document.addEventListener('DOMContentLoaded', function () {\n    var backToTopButton = document.getElementById('back-to-top');\n    backToTopButton.style.display = window.pageYOffset > 300 ? 'flex' : 'none';\n  });\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/main.js?");
 
 /***/ }),
 
-/***/ "./src/js/map.js":
-/*!***********************!*\
-  !*** ./src/js/map.js ***!
-  \***********************/
-/***/ (() => {
+/***/ "./src/js/salon_map.js":
+/*!*****************************!*\
+  !*** ./src/js/salon_map.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("// import '../scss/main.scss';\n// import Swiper from 'swiper';\n// import 'swiper/css';\n\n// document.addEventListener('DOMContentLoaded', function () {\n// ymaps.ready(init);\n\n//   function init() {\n//     // Создаем карту в контейнере \"map\"\n//     const myMap = new ymaps.Map(\"map\", {\n//       center: [45.032101, 38.921536], // Координаты центра\n//       zoom: 16 // Масштаб\n\n//     });\n\n//     // Добавляем метку\n//     const myPlacemark = new ymaps.Placemark(\n//       [45.032101, 38.921536], // Координаты метки\n//       {\n//         hintContent: 'Наш офис', // Всплывающая подсказка\n//         balloonContent: 'Приходите к нам в гости!' // Балун при клике\n//       },\n//       {\n//         iconLayout: 'default#image',\n//         iconImageHref: '../img/geography/pin.svg', // Иконка метки\n//         iconImageSize: [50, 50],\n//         iconImageOffset: [-15, -42]\n//       }\n//     );\n\n//     // Добавляем метку на карту\n//     myMap.geoObjects.add(myPlacemark);\n\n//     if (window.innerWidth < 768) {\n//       myMap.controls.remove('searchControl');\n//     }\n\n//   }\n\n//   });\n\n//# sourceURL=webpack://stdkit_project/./src/js/map.js?");
+eval("var markIcon1 = __webpack_require__(/*! @img/furniture_salon_chain/salon_map/mark1.svg */ \"./src/img/furniture_salon_chain/salon_map/mark1.svg\");\nvar markIcon2 = __webpack_require__(/*! @img/furniture_salon_chain/salon_map/mark2.svg */ \"./src/img/furniture_salon_chain/salon_map/mark2.svg\");\nvar markIcon3 = __webpack_require__(/*! @img/furniture_salon_chain/salon_map/mark3.svg */ \"./src/img/furniture_salon_chain/salon_map/mark3.svg\");\ndocument.addEventListener('DOMContentLoaded', function () {\n  ymaps.ready(init);\n  function init() {\n    // Проверяем, не существует ли уже карта в этом контейнере\n    if (!document.getElementById('furniture_salon_chain_map')._yandexMap) {\n      // Создаем карту в контейнере \"map\"\n      var myMap = new ymaps.Map(\"furniture_salon_chain_map\", {\n        center: [45.063395, 38.982277],\n        // Координаты центра\n        zoom: 12 // Масштаб\n      });\n\n      // Галерея\n      var myPlacemark1 = new ymaps.Placemark([45.039905, 38.974292],\n      // Координаты метки\n      {\n        hintContent: '',\n        // Всплывающая подсказка\n        balloonContent: 'Галерея Краснодар' // Балун при клике\n      }, {\n        iconLayout: 'default#image',\n        iconImageHref: markIcon1,\n        iconImageSize: [50, 50],\n        iconImageOffset: [-15, -42]\n      });\n\n      // Красная площадь\n      var myPlacemark2 = new ymaps.Placemark([45.101642, 38.985276],\n      // Координаты метки\n      {\n        hintContent: '',\n        // Всплывающая подсказка\n        balloonContent: 'Красная площадь' // Балун при клике\n      }, {\n        iconLayout: 'default#image',\n        iconImageHref: markIcon2,\n        iconImageSize: [50, 50],\n        iconImageOffset: [-15, -42]\n      });\n\n      // СБС\n      var myPlacemark3 = new ymaps.Placemark([45.034555, 39.045706],\n      // Координаты метки\n      {\n        hintContent: '',\n        // Всплывающая подсказка\n        balloonContent: 'СБС МегаМолл' // Балун при клике\n      }, {\n        iconLayout: 'default#image',\n        iconImageHref: markIcon3,\n        iconImageSize: [50, 50],\n        iconImageOffset: [-15, -42]\n      });\n\n      // Добавляем метки на карту\n      myMap.geoObjects.add(myPlacemark1);\n      myMap.geoObjects.add(myPlacemark2);\n      myMap.geoObjects.add(myPlacemark3);\n      if (window.innerWidth < 768) {\n        myMap.controls.remove('searchControl');\n      }\n    }\n  }\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/salon_map.js?");
+
+/***/ }),
+
+/***/ "./src/js/salon_swiper.js":
+/*!********************************!*\
+  !*** ./src/js/salon_swiper.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css */ \"./node_modules/swiper/swiper.css\");\n/* harmony import */ var _scss_components_furniture_salon_chain_salon_swiper_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../scss/components/furniture_salon_chain/salon_swiper.scss */ \"./src/scss/components/furniture_salon_chain/salon_swiper.scss\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  var salon_swiper_prevBtn = document.querySelector('.salon_swiper-button-prev');\n  var salon_swiper_nextBtn = document.querySelector('.salon_swiper-button-next');\n  var salonSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.salon_swiper.swiper-container', {\n    grabCursor: true,\n    centeredSlides: false,\n    initialSlide: 1,\n    speed: 600,\n    slidesPerView: 1,\n    spaceBetween: 50,\n    clipToSide: true,\n    watchSlidesVisibility: true,\n    loop: true,\n    effect: 'creative',\n    creativeEffect: {\n      prev: {\n        translate: ['-120%', 0, -500],\n        opacity: 0.5\n      },\n      next: {\n        translate: ['120%', 0, -500],\n        opacity: 0.5\n      },\n      limitProgress: 3\n    },\n    navigation: {\n      nextEl: salon_swiper_nextBtn,\n      prevEl: salon_swiper_prevBtn,\n      disabledClass: 'swiper-button--disabled'\n    },\n    pagination: {\n      el: \".salon_swiper__swiper-pagination\",\n      enabled: true,\n      clickable: true\n    },\n    on: {\n      click: function click(event) {\n        if (this.clickedIndex !== undefined) {\n          this.slideTo(this.clickedIndex);\n        }\n      }\n    },\n    breakpoints: {\n      768: {\n        slidesPerView: 1,\n        centeredSlides: false\n      },\n      1200: {\n        slidesPerView: 2\n      },\n      1700: {\n        slidesPerView: 3\n      }\n    }\n  });\n  salon_swiper_prevBtn.addEventListener('click', function () {\n    return salonSwiper.slidePrev();\n  });\n  salon_swiper_nextBtn.addEventListener('click', function () {\n    return salonSwiper.slideNext();\n  });\n  salonSwiper.on('slideChange', function () {\n    var slides = document.querySelectorAll('.salon_swiper__slide');\n    slides.forEach(function (slide) {\n      return slide.classList.remove('swiper-slide-active-custom');\n    });\n\n    // Активным будет слайд с индексом (activeIndex + 1) % slides.length\n    var activeIndex = (salonSwiper.activeIndex + 1) % salonSwiper.slides.length;\n    slides[activeIndex].classList.add('swiper-slide-active-custom');\n  });\n\n  // Инициализация при загрузке\n  salonSwiper.emit('slideChange');\n});\n\n//# sourceURL=webpack://stdkit_project/./src/js/salon_swiper.js?");
+
+/***/ }),
+
+/***/ "./src/scss/components/furniture_salon_chain/salon_swiper.scss":
+/*!*********************************************************************!*\
+  !*** ./src/scss/components/furniture_salon_chain/salon_swiper.scss ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://stdkit_project/./src/scss/components/furniture_salon_chain/salon_swiper.scss?");
 
 /***/ }),
 
@@ -412,7 +467,7 @@ eval("module.exports = \"data:application/font-woff;charset=utf-8;base64, d09GRg
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("766de9b7cc67b4507681")
+/******/ 		__webpack_require__.h = () => ("c4fa89c8c53bea5b4688")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
