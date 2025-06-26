@@ -1,0 +1,115 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+
+.addresses {
+    height: 700px;
+    background-color: #F3F3F0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+
+
+
+    &__title {
+        padding-top: 60px;
+        font-size: 40px;
+    }
+
+
+    &__blocks {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "block1 block2 block3";
+
+
+        &--block1 {
+            grid-area: block1;
+        }
+
+        &--block2 {
+            grid-area: block2;
+        }
+
+        &--block3 {
+            grid-area: block3;
+        }
+
+    }
+
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        gap: 30px;
+        border-radius: 20px;
+        padding: 30px;
+
+
+        &__img {
+            width: 100px;
+        }
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__description {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        border-radius: 20px;
+        border: 1px solid;
+        border-color: $primary-color;
+        justify-content: space-between;
+        padding: 10px 20px;
+
+
+        &__text {
+            display: flex;
+            font-size: 32px;
+            align-items: center;
+            gap: 10px;
+
+
+            img {
+                border-radius: 50px;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button {
+                display: flex;
+                align-items: center;
+                width: 300px;
+                height: 50px;
+                font-size: 16px;
+                justify-content: center;
+            }
+
+            &--whatsapp_btn {
+                color: $primary-color;
+                background-color: #E5E4DF;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

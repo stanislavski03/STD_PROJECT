@@ -1,0 +1,71 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.props {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 150px;
+
+
+    &__blocks {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item3 item5 item7"
+            "item2 item4 item6 item8";
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+
+        &__img {
+            width: 60px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+
+
+        &__item1 {
+            grid-area: item1;
+        }
+
+        &__item2 {
+            grid-area: item2;
+        }
+
+        &__item3 {
+            grid-area: item3;
+        }
+
+        &__item4 {
+            grid-area: item4;
+        }
+
+        &__item5 {
+            grid-area: item5;
+        }
+
+        &__item6 {
+            grid-area: item6;
+        }
+
+        &__item7 {
+            grid-area: item7;
+        }
+
+        &__item8 {
+            grid-area: item8;
+        }
+    }
+}

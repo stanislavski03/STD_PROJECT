@@ -1,0 +1,105 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.salon_swiper {
+    height: 450px;
+
+
+    &__wrapper {}
+
+
+    &__slide {
+        transition: transform 0.5s ease;
+    }
+
+    // Кнопки навигации
+    &-button-prev,
+    &-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 100; // Увеличенный z-index
+        font-weight: bold;
+        font-size: 30px;
+        color: $primary-color;
+        user-select: none;
+        border: 2px solid;
+        border-color: $primary-color;
+
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+    }
+
+    &-button-prev {
+        left: 11vw;
+    }
+
+    &-button-next {
+        right: 13vw;
+    }
+
+    // Пагинация
+    &__swiper-pagination {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+        height: 100px;
+
+        &-bullet {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            opacity: 1;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &-active {
+                background: #fff;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        max-width: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 33vw; // Нужное количество пикселей
+        background-color: #fff; // Цвет заливки
+        z-index: 10;
+    }
+
+    &::before {
+        left: -18vw; // Такой же размер как width
+    }
+
+    &::after {
+        right: -15vw; // Такой же размер как width
+    }
+
+}
+
+.swiper-slide-active-custom {
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
+    
+
+}

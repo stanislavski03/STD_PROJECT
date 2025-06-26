@@ -7,10 +7,15 @@
     flex-direction: column;
     gap: 50px;
 
+
+    @include respond-to('tablet') {
+        height: 900px;
+    }
+
     @include respond-to('big_mobile') {
-            height: 700px;
-            gap: 30px;
-        }
+        height: 700px;
+        gap: 30px;
+    }
 
 
 
@@ -150,7 +155,6 @@
 
 
 
-        &__li {}
 
 
 
@@ -231,6 +235,5 @@
     }
 
 
-    &__button {}
 
 }

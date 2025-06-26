@@ -6,8 +6,10 @@
 @use 'components/buttons';
 @use 'components/header';
 @use 'components/application';
+@use 'components/cooperation';
 @use 'components/footer';
-@use 'components/map';
+
+
 @use 'components/mentoring/performance';
 @use 'components/mentoring/about';
 @use 'components/mentoring/reasons';
@@ -17,12 +19,19 @@
 @use 'components/mentoring/offer';
 @use 'components/mentoring/tariff';
 
+
 @use 'components/design-studio/head';
 @use 'components/design-studio/founder';
 @use 'components/design-studio/us-team';
 @use 'components/design-studio/us-achievements';
 
 
+@use 'components/furniture_salon_chain/dealers';
+@use 'components/furniture_salon_chain/partners';
+@use 'components/furniture_salon_chain/salon_swiper';
+@use 'components/furniture_salon_chain/props';
+@use 'components/furniture_salon_chain/addresses';
+@use 'components/furniture_salon_chain/salon_map';
 
 @font-face {
     font-family: Muller-Trial-BoldItalic;

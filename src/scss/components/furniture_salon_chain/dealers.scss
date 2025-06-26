@@ -1,0 +1,44 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+
+.dealers {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    &__title {
+        padding-top: 200px;
+        font-size: 60px;
+
+
+    }
+
+    &__description {
+        font-size: 44px;
+        padding-bottom: 100px;
+
+    }
+
+    &__background {
+        display: flex;
+
+
+        &__textblock {
+        font-size: 24px;
+        background-color: #fff;
+        padding: 40px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-right: 18vw;
+
+    }
+    }
+
+
+    
+}
