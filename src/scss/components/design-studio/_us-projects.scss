@@ -1,0 +1,115 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.us-projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    font-family: Muller-Trial-Bold;
+    font-size: 1.5rem;
+    padding: 2rem 18vw;
+    text-align: center;
+    
+    @include respond-to('laptop') {
+      padding: 2rem 10vw;
+    }
+    
+    span {
+      font-family: Muller-Trial-LightItalic;
+    }
+  }
+}
+
+.USP-text {
+  font-family: Muller-Trial-Bold;
+  font-size: 1.5rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 2;
+  width: min-content;
+}
+
+.USP-image-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-grow: 1;
+
+  &__box {
+    position: relative;
+    width: 33.333%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    img {
+      width: 15%;
+      object-fit: contain;
+      z-index: 2;
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(1) {
+      background-image: url('~@img/studio-design/us-projects/project-1.png');
+    }
+    &:nth-child(2) {
+      background-image: url('~@img/studio-design/us-projects/project-3.png');
+    }
+    &:nth-child(3) {
+      background-image: url('~@img/studio-design/us-projects/project-2.png');
+    }
+  }
+}
+
+// Адаптация для мобильных
+@include respond-to('tablet') {
+  .USP-image-container {
+    flex-direction: column;
+    
+    &__box {
+      width: 100%;
+      height: 33.333%;
+      
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  
+  .USP-text {
+    bottom: 10%;
+    font-size: 1.2rem;
+  }
+}
