@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
           iconImageOffset: [-15, -42]
         }
       );
+      
 
       // Добавляем метки на карту
       myMap.geoObjects.add(myPlacemark1);
