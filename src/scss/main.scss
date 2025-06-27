@@ -6,8 +6,10 @@
 @use 'components/buttons';
 @use 'components/header';
 @use 'components/application';
+@use 'components/cooperation';
 @use 'components/footer';
-@use 'components/map';
+
+
 @use 'components/mentoring/performance';
 @use 'components/mentoring/about';
 @use 'components/mentoring/reasons';
@@ -20,8 +22,12 @@
 @use 'components/HAUSKA/history.scss';
 @use 'components/HAUSKA/vaseprod.scss';
 
+
 @use 'components/design-studio/head';
 @use 'components/design-studio/founder';
+@use 'components/design-studio/us-team';
+@use 'components/design-studio/us-achievements';
+@use 'components/design-studio/us-projects';
 
 
 @font-face {

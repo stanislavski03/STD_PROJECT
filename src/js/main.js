@@ -1,7 +1,8 @@
 import '../scss/main.scss';
 import Swiper from 'swiper';
 import 'swiper/css';
-import './map';
+import './salon_map';
+import './salon_swiper';
 import './header';
 
 

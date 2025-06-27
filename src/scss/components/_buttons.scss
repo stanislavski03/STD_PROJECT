@@ -10,6 +10,10 @@
   letter-spacing: 0%;
   padding: 20px 50px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
 
   @include respond-to('big_laptop') {
     font-size: 15px;
