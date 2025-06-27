@@ -1,0 +1,56 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.unique-decor {
+    font-family: Muller-Trial-Regular;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 60px;
+
+    &__header {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-family: Muller-Trial-Bold;
+        font-size: 35px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    &__subtitle {
+        font-family: Muller-Trial-RegularItalic;
+        font-size: 25px;
+        color: #595959;
+
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding-bottom: 10px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+
+    &__image {
+        display: flex;
+margin-bottom: 250px;
+    }
+
+
+
+    &__product-title {
+        font-family: Muller-Trial-Regular;
+        font-size: 30px;
+        margin-top: 75px;
+        color: #000000;
+    }
+}

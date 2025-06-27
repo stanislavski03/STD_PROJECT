@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 const pages = fs.readdirSync(path.resolve(__dirname, 'src/pages')).filter(file => file.endsWith('.html'));
 const otherPages = pages.filter(page => page !== 'index.html');
@@ -18,8 +19,10 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-    '@img': path.resolve(__dirname, 'src/img') // Обновленный алиас
-    }
+      '@img': path.resolve(__dirname, 'src/img'),
+      '@fancyapps/ui': path.resolve(__dirname, 'node_modules/@fancyapps/ui')
+    },
+    extensions: ['.js', '.mjs', '.json']
   },
   module: {
     rules: [
@@ -32,12 +35,12 @@ module.exports = {
             options: {
               plugins: [
                 require('posthtml-include')({
-                  root: 'src/pages/',
-                }),
-              ],
-            },
-          },
-        ],
+                  root: 'src/pages/'
+                })
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
@@ -53,10 +56,7 @@ module.exports = {
           path.resolve(__dirname, 'node_modules/@fancyapps/ui'),
           path.resolve(__dirname, 'node_modules/swiper')
         ],
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.css$/,
@@ -87,7 +87,10 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
       }
     ]
   },
@@ -121,7 +124,7 @@ module.exports = {
     hot: false,
     open: true,
     devMiddleware: {
-      writeToDisk: true,
+      writeToDisk: true
     },
     watchFiles: ['src/**/*'],
     port: 8080,
@@ -131,11 +134,5 @@ module.exports = {
         warnings: false
       }
     }
-  },
-  resolve: {
-    alias: {
-      '@fancyapps/ui': path.resolve(__dirname, 'node_modules/@fancyapps/ui')
-    },
-    extensions: ['.js', '.mjs', '.json']
   }
 };

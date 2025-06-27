@@ -1,6 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
-@use 'base';
+@use 'base' as *;
 
 
 @use 'components/buttons';
@@ -18,10 +18,10 @@
 @use 'components/mentoring/tariff';
 @use 'components/HAUSKA/deco.scss';
 @use 'components/HAUSKA/history.scss';
+@use 'components/HAUSKA/vaseprod.scss';
 
 @use 'components/design-studio/head';
 @use 'components/design-studio/founder';
-
 
 
 @font-face {
