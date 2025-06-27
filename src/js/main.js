@@ -4,6 +4,9 @@ import 'swiper/css';
 import './salon_map';
 import './salon_swiper';
 import './header';
+import './course_program_form'
+import './application_form'
+import './cooperation_form'
 
 
 

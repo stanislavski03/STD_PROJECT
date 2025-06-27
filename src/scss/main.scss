@@ -18,9 +18,21 @@
 @use 'components/mentoring/course_program';
 @use 'components/mentoring/offer';
 @use 'components/mentoring/tariff';
+
+
+@use 'components/furniture_salon_chain/salon_map';
+@use 'components/furniture_salon_chain/addresses.scss';
+@use 'components/furniture_salon_chain/dealers.scss';
+@use 'components/furniture_salon_chain/partners.scss';
+@use 'components/furniture_salon_chain/props.scss';
+@use 'components/furniture_salon_chain/salon_swiper.scss';
+
+
 @use 'components/HAUSKA/deco.scss';
 @use 'components/HAUSKA/history.scss';
 @use 'components/HAUSKA/vaseprod.scss';
+
+
 
 
 @use 'components/design-studio/head';

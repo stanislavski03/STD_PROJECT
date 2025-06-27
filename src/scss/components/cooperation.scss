@@ -10,9 +10,18 @@
     flex-direction: row;
     background-color: #e7e1df;
     justify-content: center;
+    overflow: hidden;
 
-    @include respond-to('laptop') {
+    @include respond-to('big_laptop') {
         height: 500px;
+    }
+
+    @include respond-to('tablet') {
+        height: 400px;
+    }
+
+    @include respond-to('big_mobile') {
+        height: 250px;
     }
 
 
@@ -21,9 +30,18 @@
         z-index: 0;
         right: 0;
         background-color: $primary-color;
-        /* Задайте желаемый цвет */
         mix-blend-mode: multiply;
-        /* Режим наложения */
+        overflow: hidden;
+
+
+        @include respond-to('before_desktop') {
+            width: 50%;
+            height: 100%;
+        }
+
+        @include respond-to('laptop') {
+            width: 100%;
+        }
     }
 
     &__shadow {
@@ -41,6 +59,14 @@
         align-items: center;
         z-index: 2;
 
+        @include respond-to('tablet') {
+            gap: 15px;
+        }
+
+        @include respond-to('big_mobile') {
+            gap: 10px;
+        }
+
 
         &__title {
             font-size: 45px;
@@ -49,7 +75,7 @@
                 font-size: 35px;
             }
 
-            @include respond-to('laptop') {
+            @include respond-to('tablet') {
                 font-size: 25px;
             }
 
@@ -65,12 +91,12 @@
                 font-size: 20px;
             }
 
-            @include respond-to('laptop') {
-                font-size: 10px;
+            @include respond-to('tablet') {
+                font-size: 15px;
             }
 
             @include respond-to('big_mobile') {
-                font-size: 7px;
+                font-size: 10px;
             }
         }
 
@@ -84,17 +110,25 @@
             background: transparent;
 
             @include respond-to('big_laptop') {
-                width: 500px;
+                width: 400px;
             }
 
             @include respond-to('laptop') {
-                width: 300px;
                 height: 40px;
+                background-color: #F3F3F0;
+            }
+
+            @include respond-to('tablet') {
+                width: 300px;
+                height: 30px;
+                font-size: 8px;
             }
 
             @include respond-to('big_mobile') {
                 width: 200px;
-                height: 30px;
+                height: 20px;
+                font-size: 6px;
+                padding-left: 10px;
             }
         }
 
@@ -109,17 +143,25 @@
             background: transparent;
 
             @include respond-to('big_laptop') {
-                width: 500px;
+                width: 400px;
             }
 
             @include respond-to('laptop') {
-                width: 300px;
                 height: 50px;
+                background-color: #F3F3F0;
+            }
+
+            @include respond-to('tablet') {
+                width: 300px;
+                height: 30px;
+                font-size: 8px;
             }
 
             @include respond-to('big_mobile') {
                 width: 200px;
-                height: 40px;
+                height: 20px;
+                font-size: 6px;
+                padding-left: 10px;
             }
         }
 
@@ -135,26 +177,26 @@
             width: 500px;
 
             @include respond-to('big_laptop') {
-                width: 500px;
+                width: 400px;
                 height: 50px;
             }
 
             @include respond-to('laptop') {
-                width: 300px;
                 height: 40px;
                 font-size: 12px;
             }
 
-            @include respond-to('big_mobile') {
-                width: 200px;
+            @include respond-to('tablet') {
+                width: 300px;
                 height: 30px;
-                font-size: 10px;
+                font-size: 8px;
             }
 
-            img {
-                @include respond-to('laptop') {
-                    width: 10%;
-                }
+            @include respond-to('big_mobile') {
+                width: 200px;
+                height: 20px;
+                font-size: 6px;
+                padding-left: 10px;
             }
         }
 
@@ -183,13 +225,8 @@
         top: 15px;
 
         @include respond-to('big_laptop') {
-            top: 50px;
-            height: 85%;
-        }
-
-        @include respond-to('laptop') {
-            top: 80px;
-            height: 75%;
+            top: 0px;
+            height: 100%;
         }
 
         @include respond-to('laptop') {

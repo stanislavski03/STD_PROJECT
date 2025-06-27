@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         centeredSlides: false,
         initialSlide: 1,
         speed: 600,
-        slidesPerView: 1,
+        slidesPerView: 3,
         spaceBetween: 50,
         clipToSide: true,
         watchSlidesVisibility: true,
@@ -59,16 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         breakpoints: {
 
-            768: {
-              slidesPerView: 1,
-              centeredSlides: false
-            },
-            1200: {
-                slidesPerView: 2
-            },
-            1700: {
-                slidesPerView: 3
-            }
+            // 768: {
+            //   slidesPerView: 1,
+            //   centeredSlides: false
+            // },
+            // 1200: {
+            //     slidesPerView: 2
+            // },
+            // 1700: {
+            //     slidesPerView: 3
+            // }
         }
 
 

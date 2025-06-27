@@ -2,7 +2,6 @@
 @use '../../mixins' as *;
 
 .salon_swiper {
-    height: 450px;
 
 
     &__wrapper {}
@@ -10,7 +9,16 @@
 
     &__slide {
         transition: transform 0.5s ease;
+
+
+        &__img {
+            @include respond-to('before_desktop') {
+                width: 100%;
+            }
+
+        }
     }
+
 
     // Кнопки навигации
     &-button-prev,
@@ -37,43 +45,58 @@
         &:hover {
             background: rgba(255, 255, 255, 1);
         }
+
+        @include respond-to('big_laptop') {
+            width: 50px;
+            height: 50px;
+        }
+
+        @include respond-to('tablet') {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        @include respond-to('big_mobile') {
+            width: 20px;
+            height: 20px;
+            font-size: 10px;
+            border: 1px solid;
+        }
     }
 
     &-button-prev {
         left: 11vw;
+
+        @include respond-to('big_laptop') {
+            left: 2vw;
+        }
+        @include respond-to('laptop') {
+            left: 35vw;
+            top: 34vw;
+        }
+        @include respond-to('big_mobile') {
+            left: 35vw;
+            top: 30vw;
+        }
     }
 
     &-button-next {
         right: 13vw;
-    }
 
-    // Пагинация
-    &__swiper-pagination {
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        z-index: 10;
-        height: 100px;
-
-        &-bullet {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            opacity: 1;
-            cursor: pointer;
-            transition: all 0.3s;
-
-            &-active {
-                background: #fff;
-                transform: scale(1.2);
-            }
+        @include respond-to('big_laptop') {
+            right: 5vw;
+        }
+        @include respond-to('laptop') {
+            right: 35vw;
+            top: 34vw;
+        }
+        @include respond-to('big_mobile') {
+            right: 35vw;
+            top: 30vw;
         }
     }
+
 
     &::before,
     &::after {
@@ -85,6 +108,14 @@
         width: 33vw; // Нужное количество пикселей
         background-color: #fff; // Цвет заливки
         z-index: 10;
+
+        @include respond-to('big_laptop') {
+            width: 25vw;
+        }
+
+        @include respond-to('laptop') {
+            width: 20vw;
+        }
     }
 
     &::before {
@@ -100,6 +131,6 @@
 .swiper-slide-active-custom {
     transition: transform 0.5s ease;
     transform: scale(1.2);
-    
+
 
 }
