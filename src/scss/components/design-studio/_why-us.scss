@@ -1,0 +1,32 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.why-us {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__header {
+        display: flex;
+        font-family: Muller-Trial-LightItalic;
+        font-size: 1.5rem;
+
+        span {
+            font-family: Muller-Trial-Bold;
+        }
+    }
+
+    &__text {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        font-family: Muller-Trial-Bold;
+        font-size: clamp(1.8rem, 2vw, 3rem);
+
+        span {
+            font-family: Muller-Trial-BoldItalic;
+            color: $primary-color;
+        }
+    }
+}
