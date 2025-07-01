@@ -37,7 +37,7 @@
   max-width: 1200px;
   padding: 0 20px;
 
-  &__image {
+ &__image {
     background-image: url('~@img/hauska/chair.svg');
     height: 446px;
     width: 400px;
@@ -45,8 +45,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
 
+    @include respond-to('laptop') {
+      height: 400px;
+      width: 350px;
+    }
+
+    @include respond-to('tablet') {
+     display: none;
+    }
+
+
+  }
   &__content {
     padding-left: 20px;
     border-left: 1px solid $primary-color;
