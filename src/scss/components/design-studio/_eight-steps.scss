@@ -1,0 +1,69 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.eight-steps {
+    display: flex;
+    flex-direction: column;
+    font-family: Muller-Trial-Bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 18vw;
+
+
+    @include respond-to('big_laptop') {
+        padding: 0 10vw;
+    }
+
+    @include respond-to('laptop') {
+        padding: 0 5vw;
+    }
+
+    span {
+        font-family: Muller-Trial-LightItalic;
+    }
+}
+
+
+.column-container {
+    columns: 2;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    &__column {
+        height: max-content;
+    }
+}
+
+.eight-steps-flexbox {
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    gap: 30px;
+
+    h1 {
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-family: Muller-Trial-Bold;
+        font-size: 4rem;
+
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.text-container-8steps {
+    h2 {
+        font-family: Muller-Trial-Bold;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-family: Muller-Trial-Light;
+        font-size: 1rem;
+    }
+}
