@@ -1,10 +1,10 @@
 @use '../../variables' as *;
 @use '../../mixins' as *;
 
-.investitions{
+.investitions {
     height: 80vh;
     background-color: rgb(56, 56, 56);
-    background-image:url('~@img/studio-design/investitions/backround-investitions.svg');
+    background-image: url('~@img/studio-design/investitions/backround-investitions.svg');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -12,47 +12,59 @@
     padding-top: 2%;
     display: flex;
     flex-direction: column;
-    bottom: 0;
-
-    &__header{
-        display: flex;
+    
+    &__header {
         color: white;
         font-family: Muller-Trial-Bold;
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
-
-    &__container{
-        border-color: $primary-color;
-        border-width: 3px;
+    
+    &__container {
+        border: 3px solid $primary-color;
         height: 65%;
         aspect-ratio: 3/1;
         display: flex;
-        img{
-            border-radius: 25px;
-            height: 100%;
-            width: 30%;
-            object-fit: cover;
+        position: relative;
+        margin-top:10%;
+    }
+
+    &__image {
+        border-radius: 25px;
+        height: 101%;
+        width: 30%;
+        object-fit: cover;
+        transform: translateX(-1rem) translateY(-5rem);
+    }
+
+    &__text-container {
+        color: white;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        position: relative;
+        padding-bottom: 3rem;
+    }
+
+    &__content {
+        font-size: 1.3rem;
+        font-family:  Muller-Trial-Regular;
+        
+        span{
+            font-family:  Muller-Trial-LightItalic;
+            color: rgb(103, 103, 103);
         }
     }
-}
 
-.text-container-investitions{
-    color: white;
-    text-align: start;
-}
-
-.transparent-button{
-    background-color: transparent;
-    border-width: 1px;
-    border-radius: 25px;
-    border-color: white;
-    color: white;
-    display: flex;
-    width: max-content;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    height: 3rem;
-    position: relative;
-    bottom: 0;
+    &__button {
+        @include transparent-button;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        min-width: 200px;
+        width: 20%;
+        padding: auto;
+    }
 }
