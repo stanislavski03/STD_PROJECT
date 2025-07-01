@@ -14,7 +14,7 @@
         font-size: 1.5rem;
         margin-bottom: 2rem;
         padding: 0 18vw;
-        text-align: center; // Выравнивание текста по центру
+        text-align: center;
 
         @include respond-to('big_laptop') {
             padding: 0 10vw;
