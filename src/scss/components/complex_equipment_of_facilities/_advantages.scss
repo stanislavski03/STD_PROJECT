@@ -1,0 +1,72 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+
+.advantages {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+
+    &__bg {
+        position: absolute;
+        background-color: #000;
+        mix-blend-mode: multiply;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+
+    &__title {
+        font-size: 40px;
+        color: #fff;
+        padding: 50px 0;
+        text-transform: uppercase;
+    }
+
+
+
+    &__blocks {
+        display: grid;
+        gap: 60px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas:
+            "block1 block2 block3";
+    }
+
+
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        gap: 20px;
+
+
+
+        &__img {}
+
+
+
+        &__description {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+
+    &__block1 {
+        grid-area: block1;
+    }
+
+    &__block2 {
+        grid-area: block2;
+    }
+
+    &__block3 {
+        grid-area: block3;
+    }
+}
