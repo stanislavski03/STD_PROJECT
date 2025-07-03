@@ -7,6 +7,14 @@
     display: flex;
     flex-direction: column;
 
+    @include respond-to('tablet') {
+        height: 600px;
+    }
+
+    @include respond-to('big_mobile') {
+        height: 500px;
+    }
+
 
     &__bg {
         position: absolute;
@@ -14,6 +22,17 @@
         mix-blend-mode: multiply;
         overflow: hidden;
         z-index: -1;
+        width: 100%;
+        height: 500px;
+
+        @include respond-to('tablet') {
+            width: 150%;
+            height: 100%;
+        }
+
+        @include respond-to('big_mobile') {
+            width: 300%;
+        }
     }
 
 
@@ -22,6 +41,14 @@
         color: #fff;
         padding: 50px 0;
         text-transform: uppercase;
+
+        @include respond-to('big_laptop') {
+            font-size: 30px;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 20px;
+        }
     }
 
 
@@ -33,6 +60,18 @@
         grid-template-rows: repeat(1, 1fr);
         grid-template-areas:
             "block1 block2 block3";
+
+
+        @include respond-to('tablet') {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "block1"
+                "block2"
+                "block3";
+
+            gap: 20px;
+        }
     }
 
 
@@ -44,16 +83,41 @@
         padding: 40px;
         gap: 20px;
 
+        @include respond-to('tablet') {
+            padding: 10px 50px;
+        }
 
 
-        &__img {}
+
+        &__img {
+
+            @include respond-to('big_laptop') {
+                width: 30%;
+            }
+
+            @include respond-to('tablet') {
+                width: 10%;
+            }
+        }
 
 
 
         &__description {
-            font-size: 24px;
+            font-size: 22px;
             color: #fff;
             text-align: center;
+
+            @include respond-to('big_laptop') {
+                font-size: 18px;
+            }
+
+            @include respond-to('laptop') {
+                font-size: 14px;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 12px;
+            }
         }
     }
 

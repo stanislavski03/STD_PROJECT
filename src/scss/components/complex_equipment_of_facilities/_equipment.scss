@@ -23,6 +23,7 @@
         @include respond-to('tablet') {
             font-size: 24px;
             padding-top: 100px;
+            padding-bottom: 50px;
         }
 
         @include respond-to('big_mobile') {
@@ -34,7 +35,7 @@
 
     &__background {
         display: flex;
-        
+
 
 
         &__textblock {
@@ -50,23 +51,27 @@
 
 
             @include respond-to('big_laptop') {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             @include respond-to('tablet') {
-                font-size: 12px;
-                padding: 20px;
+                font-size: 8px;
+                padding: 30px;
             }
 
             @include respond-to('big_mobile') {
-                font-size: 8px;
-                padding: 10px;
+                font-size: 6px;
+                padding: 20px;
+
+                bottom: -10px;
+                right: -10px;
             }
 
         }
 
 
         &__img {
+
             @include respond-to('tablet') {
                 height: 300px;
             }
