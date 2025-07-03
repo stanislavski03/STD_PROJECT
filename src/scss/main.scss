@@ -28,6 +28,12 @@
 @use 'components/furniture_salon_chain/salon_swiper.scss';
 
 
+@use 'components/complex_equipment_of_facilities/equipment';
+@use 'components/complex_equipment_of_facilities/include';
+@use 'components/complex_equipment_of_facilities/advantages';
+@use 'components/complex_equipment_of_facilities/cost';
+
+
 @use 'components/HAUSKA/deco.scss';
 @use 'components/HAUSKA/history.scss';
 @use 'components/HAUSKA/vaseprod.scss';

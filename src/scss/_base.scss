@@ -44,6 +44,18 @@ body {
   transition: opacity 0.3s;
   z-index: 999;
   transition: bottom 0.5s ease;
+
+  @include respond-to('tablet') {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  @include respond-to('big_mobile') {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 }
 
 #back-to-top:hover {
@@ -62,6 +74,7 @@ body {
   @include respond-to('big_laptop') {
     padding: 0 10vw;
   }
+
   @include respond-to('laptop') {
     padding: 0 5vw;
   }
@@ -70,4 +83,5 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
