@@ -1,0 +1,24 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.equipment-info{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 30vh;
+    height: max-content;
+    h1{
+        font-family: Muller-Trial-BoldItalic;
+        font-size: 1.3rem;
+    }
+    p{
+        font-family: Muller-Trial-Light;
+        font-size: 1rem;
+    }
+    &__flexbox{
+        display: flex;
+        gap: 15px;
+    }
+}

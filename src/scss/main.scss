@@ -47,6 +47,11 @@
 @use 'components/design-studio/investitions';
 
 
+@use 'components/complex-equipment/complex-equipment';
+@use 'components/complex-equipment/equipment-info';
+@use 'components/complex-equipment/equipment-more';
+
+
 @font-face {
     font-family: Muller-Trial-BoldItalic;
     font-style: normal;
