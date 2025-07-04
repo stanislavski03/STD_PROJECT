@@ -32,10 +32,10 @@
         bottom: -15%;
       }
 
-      @include respond-to('laptop'){
-        width: 150%;
-        bottom: -15%;
-      }
+    }
+    @include respond-to('laptop'){
+     display: none;   
+
     }
     @include respond-to('tablet'){
      display: none;   
@@ -53,6 +53,9 @@
     @include respond-to('tablet'){
       width: 100vw;   
      }
+     @include respond-to('laptop'){
+      width: 100vw;   
+     }
   }
 
   &__header {
@@ -66,6 +69,14 @@
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: #333;
+
+    @include respond-to('small_mobile'){
+      font-size: 2rem;
+    }
+
+    @include respond-to('tablet'){
+      font-size: 2rem;
+    }
   }
 
   &__name {
@@ -84,6 +95,13 @@
       height: 1px;
       background: $primary-color;
     }
+
+    @include respond-to('small_mobile'){
+      font-size: 1.3rem;
+    }
+    @include respond-to('tablet'){
+      font-size: 1.3rem;
+    }
   }
 
   &__description {
@@ -94,6 +112,22 @@
       line-height: 1.8;
       margin-bottom: 1.5rem;
       color: #444;
+
+      @include respond-to('small_mobile'){
+        font-size: 1rem;
+      }
+      @include respond-to('tablet'){
+        font-size: 1rem;
+      }
+    }
+
+    @include respond-to('small_mobile'){
+      padding: 0;
+      width: 100%;
+    }
+    @include respond-to('tablet'){
+      padding: 0;
+      width: 100%;
     }
   }
 
