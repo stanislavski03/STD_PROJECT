@@ -1,4 +1,5 @@
 @use '../../variables' as *;
+@use '../../mixins' as *;
 
 .head {
     background: #656565;
@@ -8,11 +9,33 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+    min-height: 600px; // Добавляем минимальную высоту
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include respond-to('laptop') {
+        height: 90vh;
+        min-height: 500px;
+    }
+
+    @include respond-to('tablet') {
+        height: 85vh;
+        min-height: 450px;
+        background-position: 60% center;
+    }
+
+    @include respond-to('big_mobile') {
+        height: 80vh;
+        min-height: 400px;
+    }
+
+    @include respond-to('small_mobile') {
+        height: 75vh;
+        min-height: 350px;
+    }
 
     &::before {
         content: '';
@@ -38,26 +61,93 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 1200px;
 
         &--h1 {
             font-family: Muller-Trial-Bold;
             font-size: 5rem;
             margin: 0;
+            line-height: 1.1;
+
+            @include respond-to('big_laptop') {
+                font-size: 4.5rem;
+            }
+
+            @include respond-to('laptop') {
+                font-size: 4rem;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 3.5rem;
+            }
+
+            @include respond-to('big_mobile') {
+                font-size: 2.8rem;
+            }
+
+            @include respond-to('small_mobile') {
+                font-size: 2.2rem;
+            }
         }
 
         &--h2 {
             font-family: Muller-Trial-Light;
             font-size: 5rem;
             margin: 0;
+            line-height: 1.1;
+
+            @include respond-to('big_laptop') {
+                font-size: 4.5rem;
+            }
+
+            @include respond-to('laptop') {
+                font-size: 4rem;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 3.5rem;
+            }
+
+            @include respond-to('big_mobile') {
+                font-size: 2.8rem;
+            }
+
+            @include respond-to('small_mobile') {
+                font-size: 2.2rem;
+            }
         }
-        button{
-            border-radius: 48px;
-            border: none;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 100%;
-            letter-spacing: 0%;
+
+        button {
+            font-size: 1.3rem;
+            font-family: Muller-Trial-Regular;
             padding: 20px 50px;
+            margin-top: 30px;
+
+            @include respond-to('laptop') {
+                padding: 18px 45px;
+                font-size: 1.2rem;
+            }
+
+            @include respond-to('tablet') {
+                padding: 16px 40px;
+                font-size: 1.1rem;
+                margin-top: 25px;
+            }
+
+            @include respond-to('big_mobile') {
+                padding: 14px 35px;
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+
+            @include respond-to('small_mobile') {
+                padding: 12px 30px;
+                font-size: 0.9rem;
+                margin-top: 15px;
+            }
         }
     }
 }

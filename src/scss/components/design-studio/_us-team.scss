@@ -1,17 +1,46 @@
 @use '../../variables' as *;
+@use '../../mixins' as *;
 
 .us-team {
   height: 100vh;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   position: relative;
   
+  @include respond-to('laptop') {
+    height: 90vh;
+    min-height: 500px;
+  }
+  
+  @include respond-to('tablet') {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 50px;
+  }
+
   &__header {
-    // margin: 2.5rem auto 1rem 18rem;
     display: flex;
     font-family: Muller-Trial-Bold;
     font-size: 1.5rem;
+    padding: 20px;
+    z-index: 2;
     
+    @include respond-to('laptop') {
+      font-size: 1.3rem;
+    }
+    
+    @include respond-to('tablet') {
+      font-size: 1.2rem;
+      justify-content: center;
+    }
+    
+    @include respond-to('big_mobile') {
+      font-size: 1.1rem;
+      text-align: center;
+      flex-direction: column;
+    }
+
     span {
       font-family: Muller-Trial-LightItalic;
     }
@@ -25,7 +54,15 @@
   position: relative;
   overflow: hidden;
 
-  // Градиент поверх изображений
+  @include respond-to('tablet') {
+    height: 600px;
+    flex-direction: column;
+  }
+  
+  @include respond-to('big_mobile') {
+    height: 500px;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -40,6 +77,14 @@
       rgba(0,0,0,0) 100%);
     pointer-events: none;
     z-index: 1;
+    
+    @include respond-to('tablet') {
+      background: linear-gradient(to top, 
+        rgba(0,0,0,0.8) 0%, 
+        rgba(0,0,0,0.6) 30%,
+        rgba(0,0,0,0.3) 60%,
+        rgba(0,0,0,0) 100%);
+    }
   }
 
   &__image {
@@ -48,6 +93,11 @@
     height: 100%;
     overflow: hidden;
     
+    @include respond-to('tablet') {
+      width: 100%;
+      height: 33.333%;
+    }
+    
     img {
       width: 100%;
       height: 100%;
@@ -55,16 +105,39 @@
       object-position: center;
       display: block;
       transition: transform 0.5s ease;
+      
+      @include respond-to('tablet') {
+        object-position: center 40%;
+      }
     }
 
     &:nth-child(1) img {
       object-position: center 30%;
+      
+      @include respond-to('tablet') {
+        object-position: center 50%;
+      }
     }
     &:nth-child(2) img {
       object-position: center 45%;
+      
+      @include respond-to('tablet') {
+        object-position: center 50%;
+      }
     }
     &:nth-child(3) img {
       object-position: center 60%;
+      
+      @include respond-to('tablet') {
+        object-position: center 50%;
+      }
+    }
+    
+    // Эффект при наведении для десктопов
+    @media (hover: hover) and (pointer: fine) {
+      &:hover img {
+        transform: scale(1.05);
+      }
     }
   }
 }
