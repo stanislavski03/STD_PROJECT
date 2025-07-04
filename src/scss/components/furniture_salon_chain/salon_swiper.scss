@@ -4,7 +4,11 @@
 .salon_swiper {
 
 
-    &__wrapper {}
+
+    &__wrapper {
+        overflow: visible;
+        bottom: 50px !important;
+    }
 
 
     &__slide {
@@ -12,9 +16,7 @@
 
 
         &__img {
-            @include respond-to('before_desktop') {
-                width: 100%;
-            }
+            width: 100%;
 
         }
     }
@@ -71,13 +73,14 @@
         @include respond-to('big_laptop') {
             left: 2vw;
         }
+
         @include respond-to('laptop') {
             left: 35vw;
-            top: 34vw;
-        }
-        @include respond-to('big_mobile') {
-            left: 35vw;
             top: 30vw;
+        }
+
+        @include respond-to('tablet') {
+            display: none;
         }
     }
 
@@ -87,50 +90,17 @@
         @include respond-to('big_laptop') {
             right: 5vw;
         }
+
         @include respond-to('laptop') {
-            right: 35vw;
-            top: 34vw;
-        }
-        @include respond-to('big_mobile') {
             right: 35vw;
             top: 30vw;
         }
-    }
 
-
-    &::before,
-    &::after {
-        max-width: 100%;
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 33vw; // Нужное количество пикселей
-        background-color: #fff; // Цвет заливки
-        z-index: 10;
-
-        @include respond-to('big_laptop') {
-            width: 25vw;
-        }
-
-        @include respond-to('laptop') {
-            width: 20vw;
+        @include respond-to('tablet') {
+            display: none;
         }
     }
 
-    &::before {
-        left: -18vw; // Такой же размер как width
-    }
-
-    &::after {
-        right: -15vw; // Такой же размер как width
-    }
-
-}
-
-.swiper-slide-active-custom {
-    transition: transform 0.5s ease;
-    transform: scale(1.2);
 
 
 }

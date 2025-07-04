@@ -38,7 +38,6 @@
 
     &__contacts {
         display: flex;
-
         flex-direction: column;
         gap: 5px;
     }
@@ -90,12 +89,41 @@
     }
 }
 
-@media (max-width: 768px) {
+@include respond-to('tablet') {
     .footer {
         &__container {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center; 
             gap: 20px;
+            text-align: center;
+        }
+
+        &__info,
+        &__contacts,
+        &__dev {
+            align-items: center; 
+        }
+
+        &__social {
+            justify-content: center;
+        }
+    }
+}
+
+@include respond-to('big_mobile') {
+    .footer {
+        padding: 15px 0;
+        
+        &__container {
+            gap: 15px;
+        }
+        
+        &__text,
+        &__inn,
+        &__phone,
+        &__email,
+        &__dev-text {
+            font-size: 13px;
         }
     }
 }

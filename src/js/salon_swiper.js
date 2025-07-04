@@ -1,9 +1,13 @@
-import Swiper from 'swiper';
-import 'swiper/css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 import '../scss/components/furniture_salon_chain/salon_swiper.scss';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    const swiperContainer = document.querySelector('.salon_swiper.swiper-container');
+    if (!swiperContainer) return; // Выходим если контейнера нет
+
     const salon_swiper_prevBtn = document.querySelector('.salon_swiper-button-prev');
     const salon_swiper_nextBtn = document.querySelector('.salon_swiper-button-next');
 
@@ -11,27 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const salonSwiper = new Swiper('.salon_swiper.swiper-container', {
 
         grabCursor: true,
-        centeredSlides: false,
+        centeredSlides: true,
         initialSlide: 1,
         speed: 600,
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 0,
         clipToSide: true,
         watchSlidesVisibility: true,
         loop: true,
 
 
+
+
+
         effect: 'creative',
         creativeEffect: {
             prev: {
-                translate: ['-120%', 0, -500],
-                opacity: 0.5
+                translate: ['-110%', 0, -500],
+                opacity: 0.9,
+                
             },
             next: {
-                translate: ['120%', 0, -500],
-                opacity: 0.5
+                translate: ['110%', 0, -500],
+                opacity: 0.9
             },
             limitProgress: 3
+            
         },
 
 
@@ -75,18 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    salon_swiper_prevBtn.addEventListener('click', () => salonSwiper.slidePrev());
-    salon_swiper_nextBtn.addEventListener('click', () => salonSwiper.slideNext());
 
-    salonSwiper.on('slideChange', function () {
-        const slides = document.querySelectorAll('.salon_swiper__slide');
-        slides.forEach(slide => slide.classList.remove('swiper-slide-active-custom'));
-
-        // Активным будет слайд с индексом (activeIndex + 1) % slides.length
-        const activeIndex = (salonSwiper.activeIndex + 1) % salonSwiper.slides.length;
-        slides[activeIndex].classList.add('swiper-slide-active-custom');
-    });
-
-    // Инициализация при загрузке
-    salonSwiper.emit('slideChange');
 })

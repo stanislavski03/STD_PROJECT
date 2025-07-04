@@ -1,6 +1,5 @@
 @use '../../variables' as *;
 @use '../../mixins' as *;
-
 .unique-decor {
     font-family: Muller-Trial-Regular;
     max-width: 1200px;
@@ -17,6 +16,10 @@
         text-transform: uppercase;
         margin-bottom: 10px;
         color: #000000;
+
+        @media (max-width: 767px) {
+            font-size: 28px;
+        }
     }
 
     &__subtitle {
@@ -24,6 +27,9 @@
         font-size: 25px;
         color: #595959;
 
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
     }
 
     &__product {
@@ -42,15 +48,41 @@
 
     &__image {
         display: flex;
-margin-bottom: 250px;
+        margin-bottom: 250px;
+
+        @media (max-width: 1023px) {
+            margin-bottom: 150px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 100px;
+        }
     }
-
-
 
     &__product-title {
         font-family: Muller-Trial-Regular;
         font-size: 30px;
         margin-top: 75px;
         color: #000000;
+
+        @media (max-width: 1023px) {
+            font-size: 26px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 10px;
+        margin-top: 30px;
     }
 }
