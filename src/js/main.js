@@ -1,12 +1,12 @@
 import '../scss/main.scss';
-import Swiper from 'swiper';
-import 'swiper/css';
+import 'swiper/css/bundle';
 import './salon_map';
 import './salon_swiper';
 import './header';
 import './course_program_form'
 import './application_form'
 import './cooperation_form'
+import './expectations_blocks'
 
 
 
