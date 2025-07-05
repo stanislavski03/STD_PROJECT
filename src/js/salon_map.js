@@ -1,7 +1,6 @@
-import markIcon1 from '../img/furniture_salon_chain/salon_map/mark1.svg';
-import markIcon2 from '../img/furniture_salon_chain/salon_map/mark2.svg';
-import markIcon3 from '../img/furniture_salon_chain/salon_map/mark3.svg';
-
+const markIcon1 = new URL('../img/furniture_salon_chain/salon_map/mark1.svg', import.meta.url).href;
+const markIcon2 = new URL('../img/furniture_salon_chain/salon_map/mark2.svg', import.meta.url).href;
+const markIcon3 = new URL('../img/furniture_salon_chain/salon_map/mark3.svg', import.meta.url).href;
 document.addEventListener('DOMContentLoaded', async function () {
 
   await loadYandexMaps();
