@@ -20,6 +20,7 @@
     &__title {
         font-size: 40px;
         padding: 100px 0 50px 0;
+        text-align: center;
 
         @include respond-to('tablet') {
         font-size: 20px;

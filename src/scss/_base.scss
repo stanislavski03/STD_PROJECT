@@ -85,3 +85,36 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-x-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-x-left.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-x-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-x-right.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

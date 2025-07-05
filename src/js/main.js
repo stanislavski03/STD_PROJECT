@@ -7,6 +7,7 @@ import './course_program_form'
 import './application_form'
 import './cooperation_form'
 import './expectations_blocks'
+import './observer'
 
 
 
