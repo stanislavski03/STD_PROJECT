@@ -1,0 +1,122 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.private-back {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start; 
+    background-color: #ffffff;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    overflow: hidden;
+
+    @include respond-to('laptop') {
+        padding-top: 150px;
+    }
+
+    @include respond-to('tablet') {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    @include respond-to('big_mobile') {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        align-items: center; 
+    }
+
+    &__link {
+        text-decoration: none;
+        overflow: hidden;
+        transition: transform 0.2s ease; 
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    &__text {
+        font-family: Muller-Trial-Bold;
+        font-size: 40px;
+        color: black;
+        margin-bottom: 30px;
+
+        @include respond-to('laptop') {
+            font-size: 36px;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 28px;
+            text-align: center; 
+        }
+
+        @include respond-to('middle_mobile') {
+            font-size: 24px;
+        }
+    }
+}
+
+.private-deco {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 25px;
+    overflow: hidden;
+    width: 100%;
+
+    @include respond-to('laptop') {
+        gap: 25px;
+    }
+
+    @include respond-to('tablet') {
+        flex-direction: column; 
+        gap: 20px;
+        align-items: center;
+    }
+
+    @include respond-to('big_mobile') {
+        gap: 15px;
+    }
+
+    &__image {
+        margin-bottom: 25px;
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+
+        @include respond-to('tablet') {
+            margin-bottom: 20px;
+            max-width: 80%; 
+        }
+
+        @include respond-to('big_mobile') {
+            max-width: 100%; 
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.interiors-text {
+    font-family: Muller-Trial-Regular;
+    font-size: 16px;
+    line-height: 1.5;
+
+    @include respond-to('tablet') {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    @include respond-to('big_mobile') {
+        font-size: 14px;
+        text-align: center; 
+    }
+
+    &__bold {
+        font-family: Muller-Trial-Bold;
+    }
+}
