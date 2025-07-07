@@ -15,17 +15,17 @@
   }
 
   &__container {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 15px;
+    max-width: 100%;
+    // margin: 0 auto;
+    padding: 0 0;
 
     @include respond-to('big_laptop') {
-      max-width: 95%;
+      max-width: 100%;
     }
 
     @include respond-to('laptop') {
       max-width: 100%;
-      padding: 0 20px;
+      padding: 0 0;
     }
 
     @include respond-to('tablet') {
@@ -40,10 +40,11 @@
   &__title {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     margin-bottom: 40px;
-    text-align: center;
+    // text-align: center;
     text-transform: uppercase;
     font-family: 'Muller-Trial-Bold', sans-serif;
     line-height: 1.3;
+    // margin-right: auto;
 
     @include respond-to('tablet') {
       margin-bottom: 30px;
@@ -58,11 +59,11 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 25px;
 
     @include respond-to('laptop') {
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, minmax(280px, 1fr));
       gap: 20px;
     }
 
