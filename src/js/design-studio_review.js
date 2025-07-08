@@ -1,45 +1,49 @@
-// salon_swiper.js
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+import '../scss/components/design-studio/review.scss';
 
-export function initSalonSwiper() {
-  const slider = document.querySelector('.salon__swiper');
+export function initReviewSwiper() {
+  const slider = document.querySelector('.review__swiper');
   
-  // Проверяем, существует ли слайдер на странице
   if (!slider) return;
 
   const swiper = new Swiper(slider, {
-    modules: [Navigation],
+    grabCursor: true,
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 4,
     spaceBetween: 20,
+    centeredSlides: true,
+
+    effect: 'coverflow', // или 'creative' как в рабочем примере
+coverflowEffect: {
+  rotate: 0,
+  stretch: 0,
+  depth: 100,
+  modifier: 2,
+  slideShadows: false
+},
+    
     navigation: {
-      nextEl: '.salon__button--next',
-      prevEl: '.salon__button--prev',
+      nextEl: '.review__button--next',
+      prevEl: '.review__button--prev',
+      disabledClass: 'review__button--disabled'
     },
+    
     breakpoints: {
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-      1280: { slidesPerView: 4 }
+      640: { 
+        slidesPerView: 1.5,
+        centeredSlides: true
+      },
+      768: { 
+        slidesPerView: 2,
+        centeredSlides: false
+      },
+      1024: { 
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
     }
   });
-
-  // Добавляем обработчики только если элементы существуют
-  const products = document.querySelectorAll('.salon__product');
-  if (products) {
-    products.forEach(product => {
-      product.addEventListener('mouseenter', () => {
-        // Ваш код hover-эффекта
-      });
-      
-      product.addEventListener('mouseleave', () => {
-        // Ваш код hover-эффекта
-      });
-    });
-  }
 }
 
-// Инициализируем слайдер при загрузке DOM
-document.addEventListener('DOMContentLoaded', initSalonSwiper);
+document.addEventListener('DOMContentLoaded', initReviewSwiper);
