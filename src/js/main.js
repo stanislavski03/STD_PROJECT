@@ -2,6 +2,7 @@ import '../scss/main.scss';
 import 'swiper/css/bundle';
 import './salon_map';
 import './salon_swiper';
+import './design-studio_review';
 import './header';
 import './course_program_form'
 import './application_form'
