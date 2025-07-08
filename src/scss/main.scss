@@ -3,6 +3,10 @@
 @use 'base' as *;
 
 
+@use 'components/homepage/preview.scss';
+@use 'components/homepage/links.scss';
+
+
 @use 'components/buttons';
 @use 'components/header';
 @use 'components/application';

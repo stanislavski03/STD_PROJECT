@@ -8,6 +8,7 @@ import './application_form'
 import './cooperation_form'
 import './expectations_blocks'
 import './observer'
+import './scroll-container'
 
 
 

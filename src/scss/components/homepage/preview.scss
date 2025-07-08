@@ -1,0 +1,109 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+
+.preview {
+    height: 1000px;
+    display: flex;
+    background-color: #F0E7E2;
+    justify-content: flex-end;
+    align-items: center;
+
+
+
+    &__images {
+
+
+
+        &__bg {
+            position: absolute;
+            height: 100%;
+            width: 40%;
+            bottom: 0;
+            left: 0;
+            
+            background: -webkit-linear-gradient(90deg, #fff, #F0E7E2);
+            background: -moz-linear-gradient(90deg, #fff, #F0E7E2);
+            background: linear-gradient(90deg, #fff, #F0E7E2);
+        }
+
+
+        &__person_container {
+            
+        }
+
+
+        &__img_chair {
+            position: absolute;
+            bottom: 0;
+            left: 18vw;
+            z-index: 2;
+            
+        }
+
+        &__img_person {
+            position: absolute;
+            bottom: 0;
+            left: 18vw;
+            z-index: 3;
+        }
+
+        &__img_big_tree {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        &__img_tree {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        &__img_leaves {
+            position: absolute;
+            bottom: 40vh;
+            left: 0;
+            z-index: 4;
+        }
+    }
+
+
+    &__textblock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        
+
+
+
+        &__logo {
+            width: 50%;
+        }
+
+
+        &__title {
+            font-size: 82px;
+            text-align: center;
+        }
+
+
+        &__description {
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        &__text {
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        &__button {}
+    }
+}
