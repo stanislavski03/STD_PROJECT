@@ -4,24 +4,14 @@ import '../scss/components/design-studio/review.scss';
 
 export function initReviewSwiper() {
   const slider = document.querySelector('.review__swiper');
-  
   if (!slider) return;
 
   const swiper = new Swiper(slider, {
-    grabCursor: true,
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 20,
     centeredSlides: true,
-
-    effect: 'coverflow', // или 'creative' как в рабочем примере
-coverflowEffect: {
-  rotate: 0,
-  stretch: 0,
-  depth: 100,
-  modifier: 2,
-  slideShadows: false
-},
+    watchSlidesProgress: true,
     
     navigation: {
       nextEl: '.review__button--next',
@@ -30,17 +20,33 @@ coverflowEffect: {
     },
     
     breakpoints: {
-      640: { 
+      400: {
+        slidesPerView: 1.2,
+        spaceBetween: 25
+      },
+      576: {
         slidesPerView: 1.5,
-        centeredSlides: true
-      },
-      768: { 
-        slidesPerView: 2,
-        centeredSlides: false
-      },
-      1024: { 
-        slidesPerView: 3,
         spaceBetween: 30
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 35
+      },
+      992: {
+        slidesPerView: 2.5,
+        spaceBetween: 40
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 45
+      },
+      1400: {
+        slidesPerView: 3.5,
+        spaceBetween: 50
+      },
+      1600: {
+        slidesPerView: 4,
+        spaceBetween: 50
       }
     }
   });
