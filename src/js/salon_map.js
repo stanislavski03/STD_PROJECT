@@ -1,19 +1,21 @@
-const markIcon1 = require('@img/furniture_salon_chain/salon_map/mark1.svg');
-const markIcon2 = require('@img/furniture_salon_chain/salon_map/mark2.svg');
-const markIcon3 = require('@img/furniture_salon_chain/salon_map/mark3.svg');
+const markIcon1 = new URL('../img/furniture_salon_chain/salon_map/mark1.svg', import.meta.url).href;
+const markIcon2 = new URL('../img/furniture_salon_chain/salon_map/mark2.svg', import.meta.url).href;
+const markIcon3 = new URL('../img/furniture_salon_chain/salon_map/mark3.svg', import.meta.url).href;
+document.addEventListener('DOMContentLoaded', async function () {
 
+  await loadYandexMaps();
 
-document.addEventListener('DOMContentLoaded', function () {
   ymaps.ready(init);
 
   function init() {
+    const mapContainer = document.getElementById('furniture_salon_chain_map');
+    if (!mapContainer) return; // Проверяем существование контейнера
     // Проверяем, не существует ли уже карта в этом контейнере
-    if (!document.getElementById('furniture_salon_chain_map')._yandexMap) {
       // Создаем карту в контейнере "map"
       let initialZoom = 12; // Значение по умолчанию для десктопов
       let standart_w = 50;
       let standart_h = 50;
-      
+
       if (window.innerWidth <= 1366 && window.innerWidth > 768) { // Для laptop (1366px - типичное разрешение)
         initialZoom = 11; // Уменьшаем зум на 1
         standart_w = 30;
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         zoom: initialZoom // Используем вычисленный zoom
       });
 
-      
+
 
       // Галерея
       const myPlacemark1 = new ymaps.Placemark(
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
           iconImageOffset: [-15, -42]
         }
       );
-      
+
 
       // Добавляем метки на карту
       myMap.geoObjects.add(myPlacemark1);
@@ -86,6 +88,20 @@ document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth < 768) {
         myMap.controls.remove('searchControl');
       }
-    }
+    
+  }
+
+  function loadYandexMaps() {
+    return new Promise((resolve) => {
+      if (window.ymaps) {
+        resolve();
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = 'https://api-maps.yandex.ru/2.1/?apikey=4480516c-969c-447e-a472-63b4a52db97c&lang=ru_RU';
+      script.onload = resolve;
+      document.head.appendChild(script);
+    });
   }
 });

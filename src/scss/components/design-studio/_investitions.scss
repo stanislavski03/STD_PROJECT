@@ -1,0 +1,96 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.investitions {
+    height: 80vh;
+    background-color: rgb(56, 56, 56);
+    background-image: url('~@img/studio-design/investitions/backround-investitions.svg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to('big_mobile') {
+        height: 100vh;
+    }
+    
+    &__header {
+        color: white;
+        font-family: Muller-Trial-Bold;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    &__container {
+        border: 3px solid $primary-color;
+        height: 65%;
+        aspect-ratio: 3/1;
+        display: flex;
+        position: relative;
+        margin-top:10%;
+    }
+
+    &__image {
+        border-radius: 25px;
+        height: 101%;
+        width: 30%;
+        object-fit: cover;
+        transform: translateX(-1rem) translateY(-5rem);
+
+        @include respond-to('big_mobile') {
+            width: 45%;
+            height: 90%;
+            transform: translateX(-0.5rem) translateY(-3rem);
+            margin-right: 15px;
+        }
+    }
+
+    &__text-container {
+        color: white;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        position: relative;
+        padding-bottom: 3rem;
+
+        @include respond-to('big_mobile') {
+            height: max-content;
+        }
+    }
+
+    &__content {
+        font-size: 1.3rem;
+        font-family:  Muller-Trial-Regular;
+        
+        span{
+            font-family:  Muller-Trial-LightItalic;
+            color: rgb(103, 103, 103);
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 1rem
+        }
+        @include respond-to('small_mobile') {
+            font-size: 0.9rem
+        }
+    }
+
+    &__button {
+        @include transparent-button;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        min-width: 200px;
+        width: 20%;
+        padding: auto;
+
+        @include respond-to('big_mobile') {
+            left:20%
+        }
+    }
+}

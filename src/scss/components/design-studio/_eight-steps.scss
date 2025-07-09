@@ -1,0 +1,143 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.eight-steps {
+    display: flex;
+    flex-direction: column;
+    font-family: Muller-Trial-Bold;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 18vw;
+
+    @include respond-to('big_laptop') {
+        padding: 0 10vw;
+    }
+
+    @include respond-to('laptop') {
+        padding: 0 8vw;
+        font-size: 1.3rem;
+    }
+
+    @include respond-to('tablet') {
+        padding: 0 5vw;
+        font-size: 1.2rem;
+    }
+
+    @include respond-to('big_mobile') {
+        padding: 0 4vw;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    span {
+        font-family: Muller-Trial-LightItalic;
+    }
+}
+
+.column-container {
+    columns: 2;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to('laptop') {
+        gap: 40px;
+    }
+
+    @include respond-to('tablet') {
+        flex-direction: column;
+        gap: 30px;
+        columns: 1;
+    }
+
+    &__column {
+        height: max-content;
+        width: 100%;
+
+        @include respond-to('tablet') {
+            width: 100%;
+        }
+    }
+}
+
+.eight-steps-flexbox {
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    gap: 30px;
+    align-items: center;
+
+    @include respond-to('laptop') {
+        gap: 25px;
+    }
+
+    @include respond-to('tablet') {
+        gap: 20px;
+    }
+
+    @include respond-to('big_mobile') {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    h1 {
+        display: block;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-family: Muller-Trial-Bold;
+        font-size: clamp(3rem, 5vw, 4rem); // Адаптивный размер
+        min-width: 60px; // Фиксированная ширина для цифр
+
+        @include respond-to('laptop') {
+            font-size: 3.5rem;
+        }
+
+        @include respond-to('tablet') {
+            font-size: 3rem;
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 2.5rem;
+            text-align: left;
+            min-width: 50px;
+        }
+
+        span {
+            color: $primary-color;
+        }
+    }
+}
+
+.text-container-8steps {
+    h2 {
+        font-family: Muller-Trial-Bold;
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem); // Адаптивный размер
+        margin-bottom: 0.8rem;
+
+        @include respond-to('tablet') {
+            font-size: 1.3rem;
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    p {
+        font-family: Muller-Trial-Light;
+        font-size: clamp(0.9rem, 1.1vw, 1rem); // Адаптивный размер
+        line-height: 1.6;
+
+        @include respond-to('tablet') {
+            line-height: 1.5;
+        }
+
+        @include respond-to('big_mobile') {
+            font-size: 0.95rem;
+        }
+    }
+}

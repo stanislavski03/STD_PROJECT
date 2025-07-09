@@ -1,15 +1,17 @@
 @use '../../variables' as *;
+@use '../../mixins' as *;
 
 .founder {
   position: relative;
   display: flex;
   min-height: 100vh;
+  width: 100vw;
   font-family: Muller-Trial-Regular;
   background-color: white;
   overflow: hidden;
 
   &__image-column {
-    width: 50%;
+    width: 50vw;
     position: relative;
     background-image: url('~@img/studio-design/founder/founder.png');
     background-size: cover;
@@ -19,24 +21,41 @@
 
     &--face {
       position: absolute;
-      width: 120%;
-      max-width: 150%;
+      width: 90%;
       right: -100px;
-      bottom: -15%;
+      bottom: -25%;
       margin-left: 18vw;
       z-index: 1;
+
+      @include respond-to('big_laptop'){
+        width: 120%;
+        bottom: -15%;
+      }
+
+    }
+    @include respond-to('laptop'){
+     display: none;   
+
+    }
+    @include respond-to('tablet'){
+     display: none;   
     }
   }
 
   &__text-column {
-    width: 50%;
+    width: 50vw;
     position: relative;
     background: rgba($color: #6e6e6e, $alpha: 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5rem 18vw 5rem 5rem;
     z-index: 2;
+    @include respond-to('tablet'){
+      width: 100vw;   
+     }
+     @include respond-to('laptop'){
+      width: 100vw;   
+     }
   }
 
   &__header {
@@ -50,6 +69,14 @@
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: #333;
+
+    @include respond-to('small_mobile'){
+      font-size: 2rem;
+    }
+
+    @include respond-to('tablet'){
+      font-size: 2rem;
+    }
   }
 
   &__name {
@@ -68,14 +95,39 @@
       height: 1px;
       background: $primary-color;
     }
+
+    @include respond-to('small_mobile'){
+      font-size: 1.3rem;
+    }
+    @include respond-to('tablet'){
+      font-size: 1.3rem;
+    }
   }
 
   &__description {
+    width: 70%;
+    padding-left: 100px;
     p {
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 1.5rem;
       color: #444;
+
+      @include respond-to('small_mobile'){
+        font-size: 1rem;
+      }
+      @include respond-to('tablet'){
+        font-size: 1rem;
+      }
+    }
+
+    @include respond-to('small_mobile'){
+      padding: 0;
+      width: 100%;
+    }
+    @include respond-to('tablet'){
+      padding: 0;
+      width: 100%;
     }
   }
 

@@ -10,6 +10,7 @@
     flex-direction: row;
     background-color: #F3F3F0;
     justify-content: center;
+    overflow: hidden;
 
     @include respond-to('laptop') {
             height: 500px;
@@ -69,7 +70,24 @@
         &__phone {}
 
 
-        &__comment {}
+        &__comment {
+            height: 100px;
+
+                @include respond-to('big_laptop') {
+                    width: 500px;
+                }
+    
+                @include respond-to('laptop') {
+                    width: 300px;
+                    height: 80px;
+                }
+    
+                @include respond-to('big_mobile') {
+                    width: 200px;
+                    height: 60px;
+                }
+        }
+
 
         button {
             width: 700px;
@@ -136,6 +154,26 @@
             display: none;
         }
     }
+    
+    &__image-minimal {
+        position: relative;
+        top: -10px;
+        height: 200%;
+        
 
+        @include respond-to('big_laptop') {
+            top: 50px;
+            height: 150%;
+        }
+
+        @include respond-to('laptop') {
+            top: 80px;
+            height: 100%;
+        }
+
+        @include respond-to('laptop') {
+            display: none;
+        }
+    }
 
 }

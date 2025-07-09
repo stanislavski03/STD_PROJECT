@@ -1,0 +1,49 @@
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.equipment-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    min-height: 30vh;
+    height: max-content;
+    
+    h1 {
+        font-family: Muller-Trial-BoldItalic;
+        font-size: 1.3rem;
+        
+        @include respond-to('tablet') {
+            font-size: 1.1rem;
+        }
+        
+        @include respond-to('big_mobile') {
+            font-size: 1rem;
+        }
+    }
+    
+    p {
+        font-family: Muller-Trial-Light;
+        font-size: 1rem;
+        
+        @include respond-to('tablet') {
+            font-size: 0.9rem;
+        }
+    }
+    
+    &__flexbox {
+        display: flex;
+        gap: 15px;
+        
+        @include respond-to('big_mobile') {
+            gap: 8px;
+            align-items: center;
+        }
+        
+        img {
+            @include respond-to('big_mobile') {
+                width: 20px;
+            }
+        }
+    }
+}
