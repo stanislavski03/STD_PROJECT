@@ -61,6 +61,7 @@
 
             &__description {
                 font-size: 20px;
+                text-align: center;
 
                 @include respond-to('big_laptop') {
                     font-size: 14px;

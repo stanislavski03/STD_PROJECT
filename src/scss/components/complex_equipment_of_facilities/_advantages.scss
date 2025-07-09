@@ -87,9 +87,28 @@
             padding: 10px 50px;
         }
 
+        @keyframes gentleSwing {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+        }
+
 
 
         &__img {
+
+            animation: gentleSwing 3s infinite ease-in-out;
+            transform-origin: center;
 
             @include respond-to('big_laptop') {
                 width: 30%;

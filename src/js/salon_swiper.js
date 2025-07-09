@@ -23,6 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         clipToSide: true,
         watchSlidesVisibility: true,
         loop: true,
+        autoplay: {
+            delay: 2000, // Задержка 3 секунды
+            disableOnInteraction: false, // Автопрокрутка не останавливается при взаимодействии
+        },
+
 
 
 
@@ -33,14 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
             prev: {
                 translate: ['-110%', 0, -500],
                 opacity: 0.9,
-                
+
             },
             next: {
                 translate: ['110%', 0, -500],
                 opacity: 0.9
             },
             limitProgress: 3
-            
+
         },
 
 

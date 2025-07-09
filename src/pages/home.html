@@ -8,25 +8,31 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <img src="../img/preloader/preloader_logo.svg" alt="Логотип" class="preloader__logo">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
 
-    <div class="scroll-container">
+    <div class="scroll-container" id="content" style="display: none;">
         <div class="wrapper preview__wrapper">
             <section class="container preview">
                 <div class="preview__images__bg">
                     <div class="preview__images">
                         <div class="preview__images__person_container">
-                            <img src="../img/home/preview/home_chair.svg" alt="" class="preview__images__img_chair">
-                            <img src="../img/home/preview/home_person.svg" alt="" class="preview__images__img_person">
+                            <img src="../img/home/preview/home_chair.svg" alt="" class="preview__images__img_chair fade-in-x-left">
+                            <img src="../img/home/preview/home_person.svg" alt="" class="preview__images__img_person fade-in-x-left">
                         </div>
-                        <img src="../img/home/preview/home_tree.svg" alt="" class="preview__images__img_tree">
-                        <img src="../img/home/preview/home_big_tree.svg" alt="" class="preview__images__img_big_tree">
-                        <img src="../img/home/preview/home_leaves.svg" alt="" class="preview__images__img_leaves">
+                        <img src="../img/home/preview/home_tree.svg" alt="" class="preview__images__img_tree fade-in-x-left">
+                        <img src="../img/home/preview/home_big_tree.svg" alt="" class="preview__images__img_big_tree fade-in-x-left">
+                        <img src="../img/home/preview/home_leaves.svg" alt="" class="preview__images__img_leaves fade-in-x-left">
                     </div>
                 </div>
                 <div class="preview__textblock fade-in-x-right">
                     <img src="../img/home/preview/home_logo.svg" alt="" class="preview__textblock__logo">
                     <div class="preview__textblock__title">
-                        <span class="Muller-Trial-Bold">Виктория<br>Лахтина</span>
+                        <span class="Muller-Trial-Regular">Виктория<br>Лахтина</span>
                     </div>
                     <div class="preview__textblock__description">
                         <span class="Muller-Trial-Bold">Руководитель дизайн-студии Lahtina Design</span>

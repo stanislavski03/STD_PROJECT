@@ -24,6 +24,7 @@
     &__title {
         padding-top: 60px;
         font-size: 40px;
+        text-transform: uppercase;
 
         @include respond-to('laptop') {
             font-size: 30px;
@@ -84,11 +85,23 @@
             padding: 15px;
             gap: 15px;
         }
-        
 
+        @keyframes pulseScale {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(0.9);
+            }
+        }
 
         &__img {
             width: 100px;
+            animation: pulseScale 2s infinite ease-in-out;
+            transform-origin: center;
 
             @include respond-to('big_laptop') {
                 width: 80px;
@@ -156,6 +169,7 @@
             font-size: 32px;
             align-items: center;
             gap: 10px;
+            text-transform: uppercase;
 
 
             img {
