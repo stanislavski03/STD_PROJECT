@@ -8,70 +8,82 @@
 </head>
 
 <body>
-  <include src="./components/header.html"></include>
-  <div class="container">
-    <div class="private-back">
-      <a class="private-back__link" href="private_and_commercial_interiors1.html">
-        <p class="private-back__text"> ← Квартира писателя </p>
-      </a>
+  <div id="preloader">
+    <img src="../img/preloader/preloader_logo.svg" alt="Логотип" class="preloader__logo">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  <div id="content" style="display: none;">
+    <include src="./components/header.html"></include>
+    <div class="container">
+      <div class="private-back">
+        <a class="private-back__link" href="private_and_commercial_interiors1.html">
+          <p class="private-back__text fade-in"> ← Квартира писателя </p>
+        </a>
 
-      <div class="private-deco">
-        <div>
-          <img class="private-deco__image" src="/src/img/paci2/The writer's chair.svg">
-          <img class="private-deco__image" src="/src/img/paci2/a writer's workplace.svg">
+        <div class="private-deco fade-in">
+          <div>
+            <img class="private-deco__image" src="/src/img/paci2/The writer's chair.svg">
+            <img class="private-deco__image" src="/src/img/paci2/a writer's workplace.svg">
+          </div>
+          <div>
+            <img class="private-deco__image" src="/src/img/paci2/The writer's living room.svg">
+            <img class="private-deco__image" src="/src/img/paci2/The writer's room.svg">
+          </div>
+          <div>
+            <img class="private-deco__image" src="/src/img/paci2/The writer's sofa.svg">
+            <img class="private-deco__image" src="/src/img/paci2/the second place of work of the writer.svg">
+          </div>
         </div>
-        <div>
-          <img class="private-deco__image" src="/src/img/paci2/The writer's living room.svg">
-          <img class="private-deco__image" src="/src/img/paci2/The writer's room.svg">
-        </div>
-        <div>
-          <img class="private-deco__image" src="/src/img/paci2/The writer's sofa.svg">
-          <img class="private-deco__image" src="/src/img/paci2/the second place of work of the writer.svg">
-        </div>
-      </div>
 
-      <div class="interiors-text">
-        <p class="interiors-text__bold"> 
+        <div class="interiors-text fade-in">
+          <p class="interiors-text__bold">
             Идеальный интерьер для писателя — это не просто стол и стул, а атмосфера, в которой рождаются мысли. Здесь
             важна
             каждая деталь: мягкий свет, уютный беспорядок книг, тихий шелест страниц.
-        </p>
+          </p>
 
-        <p>
-          Книги повсюду. Полки от пола до потолка, стопки на подоконнике, томики на журнальном столике — они не просто
-          хранят знания, они создают настроение. Старинные издания в кожаных переплетах соседствуют с новыми сборниками,
-          а между ними — закладки, заметки, обрывки идей.
-        </p>
-        <p>
-          Рабочий стол — сердце кабинета. Массивный деревянный или минималистичный стеклянный, но обязательно с местом
-          для рукописей. Рядом — чернильная ручка, блокнот для внезапных озарений и чашка кофе, остывающего в спешке за
-          письмом.
-        </p>
-        <p>
-          Свет как соавтор. Тёплая настольная лампа с мягким рассеивающим светом, свечи в подсвечниках для ночных
-          бдений, а если есть окно — то с видом на деревья или городскую суету, чтобы было куда отвести взгляд в поисках
-          метафоры.
-        </p>
-        <p>
-          Уголок для раздумий. Кожаное кресло у камина или глубокий диван с пледом — место, где можно перечитать
-          написанное, отложить текст «на выдержку» или просто помечтать, глядя в потолок.
-        </p>
-        <p>
-          Детали, которые рассказывают историю. Старинная карта на стене, печатная машинка на полке (даже если пишется в
-          ноутбуке), винтажные часы с тикающим механизмом. Здесь время течёт иначе, подчиняясь ритму слов.
-        </p>
-        <p>
-          Это пространство, где тишина становится текстом, а хаос мыслей — стройными предложениями. Главное — чтобы
-          здесь хотелось творить.
-        </p>
+          <p>
+            Книги повсюду. Полки от пола до потолка, стопки на подоконнике, томики на журнальном столике — они не просто
+            хранят знания, они создают настроение. Старинные издания в кожаных переплетах соседствуют с новыми
+            сборниками,
+            а между ними — закладки, заметки, обрывки идей.
+          </p>
+          <p>
+            Рабочий стол — сердце кабинета. Массивный деревянный или минималистичный стеклянный, но обязательно с местом
+            для рукописей. Рядом — чернильная ручка, блокнот для внезапных озарений и чашка кофе, остывающего в спешке
+            за
+            письмом.
+          </p>
+          <p>
+            Свет как соавтор. Тёплая настольная лампа с мягким рассеивающим светом, свечи в подсвечниках для ночных
+            бдений, а если есть окно — то с видом на деревья или городскую суету, чтобы было куда отвести взгляд в
+            поисках
+            метафоры.
+          </p>
+          <p>
+            Уголок для раздумий. Кожаное кресло у камина или глубокий диван с пледом — место, где можно перечитать
+            написанное, отложить текст «на выдержку» или просто помечтать, глядя в потолок.
+          </p>
+          <p>
+            Детали, которые рассказывают историю. Старинная карта на стене, печатная машинка на полке (даже если пишется
+            в
+            ноутбуке), винтажные часы с тикающим механизмом. Здесь время течёт иначе, подчиняясь ритму слов.
+          </p>
+          <p>
+            Это пространство, где тишина становится текстом, а хаос мыслей — стройными предложениями. Главное — чтобы
+            здесь хотелось творить.
+          </p>
+        </div>
+
+
       </div>
 
-
     </div>
-
+    <button id="back-to-top" title="Вернуться наверх"></button>
+    <include src="./components/footer.html"></include>
   </div>
-  <button id="back-to-top" title="Вернуться наверх"></button>
-  <include src="./components/footer.html"></include>
 
 </body>
 

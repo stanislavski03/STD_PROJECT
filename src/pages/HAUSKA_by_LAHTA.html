@@ -8,137 +8,147 @@
 </head>
 
 <body>
-  <include src="./components/header.html"></include>
-  <div class="container">
-    <div class="deco">
-      <span class="deco__decor-text">Интерьерный декор</span>
-      <span class="deco__hauska-text">HAUSKA by LAHTA</span>
+  <div id="preloader">
+    <img src="../img/preloader/preloader_logo.svg" alt="Логотип" class="preloader__logo">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
   </div>
-  <div class="deco__room"></div>
-  <div class="container">
-
-    <div class="container about-hauska">
-      <h1 class="about-hauska__header">О компании</h1>
-      <p class="about-hauska__description">
-        Мебель из Финляндии HAUSKA – это удивительный баланс красоты <br class="desktop-only">и комфорта.
-        Ручная сборка делает каждый предмет поистине неповторимым.
-      </p>
+  <div id="content" style="display: none;">
+    <include src="./components/header.html"></include>
+    <div class="container">
+      <div class="deco">
+        <span class="deco__decor-text fade-in">Интерьерный декор</span>
+        <span class="deco__hauska-text fade-in">HAUSKA by LAHTA</span>
+      </div>
     </div>
+    <div class="deco__room"></div>
+    <div class="container">
 
-
-    <div class="history">
-      <div class="history__image"></div>
-      <div class="history__content">
-        <h1 class="history__header">ИСТОРИЯ</h1>
-        <span class="history__intro">
-          Мебель из Финляндии HAUSKA – это удивительный баланс красоты и комфорта.
+      <div class="container about-hauska">
+        <h1 class="about-hauska__header fade-in">О компании</h1>
+        <p class="about-hauska__description fade-in">
+          Мебель из Финляндии HAUSKA – это удивительный баланс красоты <br class="desktop-only fade-in">и комфорта.
           Ручная сборка делает каждый предмет поистине неповторимым.
-        </span>
-        <p class="history__intro">
-          Все началось в 1964 году в Финляндии, когда глава большого семейства принял
-          самое смелое решение в своей жизни: продал всех коров и стал ремесленником,
-          тем самым изменив не только судьбу семьи, но образ жизни миллионов людей.
-        </p>
-        <p class="history__intro">
-          Изначально занимаясь доставкой, он увлекся производственным процессом и
-          вместе с другом занялся перетяжкой подержанных диванов прямо в своем гараже.
         </p>
       </div>
-    </div>
 
-    <div class="history-continuation">
-      <p class="history-continuation__paragraph">
-        Через 5 лет к делу подключились все члены семьи и появились первые наемные
-        сотрудники. Компания запустила производство и начала выпускать новые диваны, которые сразу приобрели
-        популярность. Модели отличались
-        непревзойденным качеством ручной работы и доступной стоимостью, выгодно выделяясь среди конкурентов. Эти
-        принципы и лежат в основе философии бренда HAUSKA, которая позволяет фабрике до сих пор сохранять лидирующие
-        позиции на мебельном рынке.
-      </p>
 
-      <p class="history-continuation__paragraph">
-        Спустя 20 лет компания HAUSKA в несколько раз увеличила производственные мощности и расширила географию
-        дилерской
-        сети. Сегодня бренд во всем мире ценят за аутентичный скандинавский стиль, верность традициям, высокое
-        мастерство
-        и экологичный подход к производству. Крупнейший финский производитель HAUSKA по-прежнему отдает приоритет
-        ручной работе.
-      </p>
-
-      <p class="history-continuation__paragraph">
-        Вот почему каждый диван, кресло или стол наделяются не только современными эргономичными свойствами, но и особым
-        характером. В дизайнерских шоурумах разных стран можно найти широкий ассортимент мягкой и столовой мебели.
-        Предметы из коллекции HAUSKA не только создают комфортную обстановку в интерьере, но и придают уверенность
-        их обладателям.
-      </p>
-    </div>
-
-    <div class="unique-decor">
-      <div class="unique-decor__header">
-        <h1 class="unique-decor__title">УНИКАЛЬНЫЕ ПРЕДМЕТЫ ДЕКОРА</h1>
-        <p class="unique-decor__subtitle">СОЗДАННЫЕ С ДУШОЙ И ЛЮБОВЬЮ К СВОЕМУ РЕМЕСЛУ</p>
-      </div>
-
-      <div class="unique-decor__products-container">
-
-        <p class="unique-decor__product-title">Ваза светлая</p>
-        <div class="unique-decor__product">
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/vase on the side.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/vase on top2.svg" class="unique-decor__product-image">
-          </div>
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/vase on the side2.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/vase is black.svg" class="unique-decor__product-image">
-          </div>
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/vase on top.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/vase is light.svg" class="unique-decor__product-image">
-          </div>
-        </div>
-
-        <p class="unique-decor__product-title">Интерьерная чаша</p>
-        <div class="unique-decor__product">
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/blak inter on site.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/blak inter on side zoom.svg" class="unique-decor__product-image">
-          </div>
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/black inter on top.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/blak inter left.svg" class="unique-decor__product-image">
-          </div>
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/blak inter on top zoom.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/blak inter.svg" class="unique-decor__product-image">
-          </div>
-        </div>
-
-        <p class="unique-decor__product-title">Интерьерная чаша</p>
-        <div class="unique-decor__product">
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/inter on site.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/inter on top2.svg" class="unique-decor__product-image">
-          </div>
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/inter on site right.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/inter ahead.svg" class="unique-decor__product-image">
-          </div>
-          <div class="unique-decor__product-group">
-            <img src="/src/img/hauska/inter on top.svg" class="unique-decor__product-image">
-            <img src="/src/img/hauska/inter.svg" class="unique-decor__product-image">
-          </div>
+      <div class="history fade-in">
+        <div class="history__image"></div>
+        <div class="history__content">
+          <h1 class="history__header">ИСТОРИЯ</h1>
+          <span class="history__intro">
+            Мебель из Финляндии HAUSKA – это удивительный баланс красоты и комфорта.
+            Ручная сборка делает каждый предмет поистине неповторимым.
+          </span>
+          <p class="history__intro">
+            Все началось в 1964 году в Финляндии, когда глава большого семейства принял
+            самое смелое решение в своей жизни: продал всех коров и стал ремесленником,
+            тем самым изменив не только судьбу семьи, но образ жизни миллионов людей.
+          </p>
+          <p class="history__intro">
+            Изначально занимаясь доставкой, он увлекся производственным процессом и
+            вместе с другом занялся перетяжкой подержанных диванов прямо в своем гараже.
+          </p>
         </div>
       </div>
-    </div>
-  </div>
-  <include src="./components/cooperation.html"></include>
 
-  <div class="black-footer">
+      <div class="history-continuation fade-in">
+        <p class="history-continuation__paragraph">
+          Через 5 лет к делу подключились все члены семьи и появились первые наемные
+          сотрудники. Компания запустила производство и начала выпускать новые диваны, которые сразу приобрели
+          популярность. Модели отличались
+          непревзойденным качеством ручной работы и доступной стоимостью, выгодно выделяясь среди конкурентов. Эти
+          принципы и лежат в основе философии бренда HAUSKA, которая позволяет фабрике до сих пор сохранять лидирующие
+          позиции на мебельном рынке.
+        </p>
+
+        <p class="history-continuation__paragraph">
+          Спустя 20 лет компания HAUSKA в несколько раз увеличила производственные мощности и расширила географию
+          дилерской
+          сети. Сегодня бренд во всем мире ценят за аутентичный скандинавский стиль, верность традициям, высокое
+          мастерство
+          и экологичный подход к производству. Крупнейший финский производитель HAUSKA по-прежнему отдает приоритет
+          ручной работе.
+        </p>
+
+        <p class="history-continuation__paragraph">
+          Вот почему каждый диван, кресло или стол наделяются не только современными эргономичными свойствами, но и
+          особым
+          характером. В дизайнерских шоурумах разных стран можно найти широкий ассортимент мягкой и столовой мебели.
+          Предметы из коллекции HAUSKA не только создают комфортную обстановку в интерьере, но и придают уверенность
+          их обладателям.
+        </p>
+      </div>
+
+      <div class="unique-decor ">
+        <div class="unique-decor__header fade-in">
+          <h1 class="unique-decor__title">УНИКАЛЬНЫЕ ПРЕДМЕТЫ ДЕКОРА</h1>
+          <p class="unique-decor__subtitle">СОЗДАННЫЕ С ДУШОЙ И ЛЮБОВЬЮ К СВОЕМУ РЕМЕСЛУ</p>
+        </div>
+
+        <div class="unique-decor__products-container">
+
+          <p class="unique-decor__product-title fade-in ">Ваза светлая</p>
+          <div class="unique-decor__product">
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/vase on the side.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/vase on top2.svg" class="unique-decor__product-image">
+            </div>
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/vase on the side2.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/vase is black.svg" class="unique-decor__product-image">
+            </div>
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/vase on top.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/vase is light.svg" class="unique-decor__product-image">
+            </div>
+          </div>
+
+          <p class="unique-decor__product-title fade-in">Интерьерная чаша</p>
+          <div class="unique-decor__product">
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/blak inter on site.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/blak inter on side zoom.svg" class="unique-decor__product-image">
+            </div>
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/black inter on top.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/blak inter left.svg" class="unique-decor__product-image">
+            </div>
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/blak inter on top zoom.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/blak inter.svg" class="unique-decor__product-image">
+            </div>
+          </div>
+
+          <p class="unique-decor__product-title fade-in">Интерьерная чаша</p>
+          <div class="unique-decor__product">
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/inter on site.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/inter on top2.svg" class="unique-decor__product-image">
+            </div>
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/inter on site right.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/inter ahead.svg" class="unique-decor__product-image">
+            </div>
+            <div class="unique-decor__product-group fade-in">
+              <img src="/src/img/hauska/inter on top.svg" class="unique-decor__product-image">
+              <img src="/src/img/hauska/inter.svg" class="unique-decor__product-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <include src="./components/cooperation.html"></include>
+
+
     <include src="./components/footer.html"></include>
+
+
+    <button id="back-to-top" title="Вернуться наверх"></button>
   </div>
 
-  <button id="back-to-top" title="Вернуться наверх"></button>
 </body>
 
 </html>
