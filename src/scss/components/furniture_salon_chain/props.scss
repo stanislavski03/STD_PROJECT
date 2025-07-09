@@ -56,9 +56,27 @@
         gap: 20px;
         padding: 20px;
 
+        @keyframes gentleSwing {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+        }
 
         &__img {
             width: 60px;
+
+            animation: gentleSwing 3s infinite ease-in-out;
+            transform-origin: center;
 
             @include respond-to('big_laptop') {
                 width: 40px;

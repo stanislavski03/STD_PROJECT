@@ -5,6 +5,9 @@
     height: 960px;
     width: auto;
 
+    display: flex;
+    align-items: center;
+
 
 
 
@@ -23,15 +26,37 @@
         z-index: -1;
         position: absolute;
         width: 100%;
-        height: 100%;
+
+        @include respond-to('before_desktop') {
+            width: auto;
+            height: 100%;
+        }
+
+        @include respond-to('big_laptop') {
+            left: -220px;
+        }
+
+        @include respond-to('laptop') {
+            left: -420px;
+        }
+
+
     }
 
     &__left_tree {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+
+        @include respond-to('big_laptop') {
+            left: -220px;
         }
+
+        @include respond-to('big_mobile') {
+            filter: blur(2px);
+        }
+    }
 
 
     &__buttons {
@@ -44,6 +69,16 @@
         grid-template-areas:
             "btn1 btn2 btn3";
         justify-items: center;
+
+        @include respond-to('big_mobile') {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "btn1"
+                "btn2"
+                "btn3";
+            height: 80%;
+        }
 
 
 
@@ -70,6 +105,14 @@
         text-decoration: none;
         position: relative;
 
+        @include respond-to('tablet') {
+            gap: 50px;
+        }
+
+        @include respond-to('big_mobile') {
+            gap: 20px;
+        }
+
         &:hover {
             .links__button__shadow {
                 opacity: 1;
@@ -79,17 +122,21 @@
                 background-color: rgba(247, 247, 247, 0.6);
                 backdrop-filter: blur(1px);
             }
+
             .links__button__text span {
-                transform: translateY(-50px); /* Сдвиг вверх на 10 пикселей */
+                transform: translateY(-50px);
+                /* Сдвиг вверх на 10 пикселей */
             }
+
             .links__button__text button {
                 opacity: 1;
             }
+
             .links__button__ico {
                 filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg);
             }
-            
-            
+
+
         }
 
 
@@ -104,6 +151,17 @@
             z-index: -1;
             bottom: 325px;
 
+            @include respond-to('tablet') {
+                width: 150px;
+            }
+
+            @include respond-to('big_mobile') {
+                width: 140px;
+                height: 200px;
+                z-index: -1;
+                bottom: -10px;
+            }
+
         }
 
         &__shadow::before {
@@ -114,7 +172,7 @@
             background: -webkit-linear-gradient(0deg, transparent, rgba(247, 247, 247, 0.6), transparent);
             background: -moz-linear-gradient(0deg, transparent, rgba(247, 247, 247, 0.6), transparent);
             background: linear-gradient(0deg, transparent, rgba(247, 247, 247, 0.6), transparent);
-            
+
             backdrop-filter: blur(1px);
             clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
             transform: perspective(100px) rotateX(2deg);
@@ -133,6 +191,11 @@
             background-color: transparent;
             border-radius: 100px;
             transition: background 0.3s ease;
+
+            @include respond-to('tablet') {
+                width: 100px;
+                height: 100px;
+            }
         }
 
 
@@ -147,13 +210,22 @@
             border-radius: 100px;
             border: 0.5px solid;
             border-color: #fff;
+
+            @include respond-to('tablet') {
+                width: 80px;
+                height: 80px;
+            }
         }
 
 
         &__ico {
             width: 70%;
             transition: filter 0.9s ease;
-            
+
+            @include respond-to('tablet') {
+                width: 50%;
+            }
+
         }
 
 
@@ -161,11 +233,24 @@
             display: flex;
             flex-direction: column;
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
             text-align: center;
             align-items: center;
-            
-            
+            text-transform: uppercase;
+
+            @include respond-to('laptop') {
+                font-size: 16px;
+            }
+
+            @include respond-to('tablet') {
+                font-size: 13px;
+            }
+
+            @include respond-to('big_mobile') {
+                font-size: 10px;
+            }
+
+
             span {
                 transition: transform 0.9s ease;
                 top: 20px;
@@ -179,9 +264,14 @@
                 padding: 10px;
                 font-size: 16px;
 
+                @include respond-to('tablet') {
+                    font-size: 13px;
+                    width: 100px;
+                }
+
             }
 
-            
+
         }
 
 

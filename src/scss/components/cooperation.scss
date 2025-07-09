@@ -70,6 +70,7 @@
 
         &__title {
             font-size: 45px;
+            text-transform: uppercase;
 
             @include respond-to('big_laptop') {
                 font-size: 35px;
@@ -85,14 +86,15 @@
         }
 
         &__description {
-            font-size: 30px;
+            font-size: 25px;
+            text-transform: uppercase;
 
             @include respond-to('big_laptop') {
-                font-size: 20px;
+                font-size: 15px;
             }
 
             @include respond-to('tablet') {
-                font-size: 15px;
+                font-size: 12px;
             }
 
             @include respond-to('big_mobile') {
