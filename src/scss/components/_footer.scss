@@ -9,6 +9,10 @@
     bottom: 0;
     z-index: 998;
 
+    .black-footer & {
+        background-color: #000000;
+    }
+
     &__container {
         max-width: 1200px;
         margin: 0 auto;
@@ -91,9 +95,11 @@
 
 @include respond-to('tablet') {
     .footer {
+        font-size: 10px;
+
         &__container {
             flex-direction: column;
-            align-items: center; 
+            align-items: center;
             gap: 20px;
             text-align: center;
         }
@@ -101,7 +107,7 @@
         &__info,
         &__contacts,
         &__dev {
-            align-items: center; 
+            align-items: center;
         }
 
         &__social {
@@ -113,17 +119,17 @@
 @include respond-to('big_mobile') {
     .footer {
         padding: 15px 0;
-        
+        font-size: 10px;
         &__container {
             gap: 15px;
         }
-        
+
         &__text,
         &__inn,
         &__phone,
         &__email,
         &__dev-text {
-            font-size: 13px;
+            font-size: 10px;
         }
     }
 }
