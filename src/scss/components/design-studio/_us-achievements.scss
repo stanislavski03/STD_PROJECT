@@ -2,7 +2,7 @@
 @use '../../variables' as *;
 
 .us-achievements {
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,13 +32,12 @@
 
 .USA-flexbox {
     display: flex;
-    justify-content: center; // Центрируем контейнеры по горизонтали
+    justify-content: center;
     width: 100%;
     flex-grow: 1;
     align-items: stretch;
-    padding: 0 18vw;
     box-sizing: border-box;
-    margin: 0 auto; // Автоматические отступы по бокам
+    margin: 0 auto;
 
     @include respond-to('big_laptop') {
         padding: 0 10vw;
@@ -47,7 +46,7 @@
     @include respond-to('laptop') {
         padding: 0 5vw;
         flex-wrap: wrap;
-        justify-content: space-around; // Равномерное распределение при переносе
+        justify-content: space-around;
     }
 }
 
@@ -59,7 +58,6 @@
     padding: 1rem;
     box-sizing: border-box;
     overflow: hidden;
-    margin: 0 1rem;
 
     img {
         border-radius: 50%;
@@ -87,10 +85,9 @@
 
 }
 
-// Адаптация для мобильных устройств
 @include respond-to('laptop') {
     .USA-container {
-        flex: 0 1 calc(50% - 4rem); // 2 колонки с большими отступами
+        flex: 0 1 calc(50% - 4rem);
         margin-bottom: 2rem;
     }
 
@@ -102,11 +99,11 @@
 
 @include respond-to('tablet') {
     .USA-container {
-        flex: 0 1 100%; // 1 колонка
-        max-width: 300px; // Ограничение максимальной ширины
+        flex: 0 1 100%;
+        max-width: 300px;
     }
 
     .USA-flexbox {
-        justify-content: center; // Центрируем в одну колонку
+        justify-content: center;
     }
 }

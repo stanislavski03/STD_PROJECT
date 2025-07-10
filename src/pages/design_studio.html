@@ -8,11 +8,20 @@
 </head>
 
 <body>
+  <div id="preloader">
+    <img src="../img/preloader/preloader_logo.svg" alt="Логотип" class="preloader__logo">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  <div id="content" style="display: none;">
+
+
   <include src="./components/header.html"></include>
 
 
   <section class="head">
-    <div class="head__text">
+    <div class="head__text fade-in">
       <h1 class="head__text--h1">
         LAHTINA.DESIGN
       </h1>
@@ -27,16 +36,16 @@
 
   <section class="founder">
     <div class="founder__image-column">
-      <img src="../img/studio-design/founder/founder-face.png" class="founder__image-column--face">
+      <img src="../img/studio-design/founder/founder-face.png" class="founder__image-column--face fade-in-x-left">
     </div>
 
     <div class="founder__text-column">
-      <div class="founder__header">
+      <div class="founder__header fade-in">
         <h1 class="founder__title">Основатель и идейный <br> вдохновитель студии,</h1>
         <h2 class="founder__name">Виктория Лахтина</h2>
       </div>
 
-      <div class="founder__description">
+      <div class="founder__description fade-in-x-right">
         <p>Верю в то, что правильно спроектированное пространство <span class="highlight">влияет на человека и дает ему
             состояние счастья,</span> от которого зависит в целом успех во всех сферах его жизни. Я знаю как формировать
           такие пространства.</p>
@@ -52,13 +61,13 @@
       <h1>НАША <span>КОМАНДА</span></h1>
     </div>
     <div class="UST-image-container">
-      <div class="UST-image-container__image">
+      <div class="UST-image-container__image fade-in-x-left">
         <img src="../img/studio-design/us-team/team-1.jpg">
       </div>
-      <div class="UST-image-container__image">
+      <div class="UST-image-container__image fade-in">
         <img src="../img/studio-design/us-team/team-2.jpg">
       </div>
-      <div class="UST-image-container__image">
+      <div class="UST-image-container__image fade-in-x-right">
         <img src="../img/studio-design/us-team/team-3.jpg">
       </div>
     </div>
@@ -69,7 +78,7 @@
     <div class="us-achievements__header">
       <h1>НАШИ <span>ДОСТИЖЕНИЯ</span></h1>
     </div>
-    <div class="USA-flexbox">
+    <div class="USA-flexbox container fade-in">
       <div class="USA-container">
         <img src="../img/studio-design/us-achievements/achievement-1.png" alt="достижение 1">
         <h1 class="USA-container__header">320 частных и коммерческих проектов</h1>
@@ -80,7 +89,7 @@
           так и для бизнеса</p>
       </div>
 
-      <div class="USA-container">
+      <div class="USA-container fade-in">
         <img src="../img/studio-design/us-achievements/achievement-2.png" alt="достижение 2">
         <h1 class="USA-container__header">Победитель
           международной премии ADD AWARDS</h1>
@@ -91,7 +100,7 @@
           и до международных</p>
       </div>
 
-      <div class="USA-container">
+      <div class="USA-container fade-in">
         <img src="../img/studio-design/us-achievements/achievement-3.png" alt="достижение 3">
         <h1 class="USA-container__header">Проектируем объекты федерального назначения</h1>
         <p class="USA-container__text">Проектируем объекты
@@ -101,7 +110,7 @@
           социальные объекты и др.</p>
       </div>
 
-      <div class="USA-container">
+      <div class="USA-container fade-in">
         <img src="../img/studio-design/us-achievements/achievement-4.png" alt="достижение 4">
         <h1 class="USA-container__header">Превращаем опыт
           в уникальные
@@ -121,17 +130,17 @@
     </div>
 
     <div class="USP-image-container">
-      <div class="USP-image-container__box">
+      <div class="USP-image-container__box fade-in-x-right">
         <img src="../img/studio-design/us-projects/logo-white.svg" alt="logo_white">
         <h1 class="USP-text">Частные
           и коммерческие интерьеры</h1>
       </div>
-      <div class="USP-image-container__box">
+      <div class="USP-image-container__box fade-in-x-right">
         <img src="../img/studio-design/us-projects/logo-white.svg" alt="logo_white">
         <h1 class="USP-text">Архитектура
           и общественные пространства</h1>
       </div>
-      <div class="USP-image-container__box">
+      <div class="USP-image-container__box fade-in-x-right">
         <img src="../img/studio-design/us-projects/logo-white.svg" alt="logo_white">
         <h1 class="USP-text">Ландшафты</h1>
       </div>
@@ -142,7 +151,7 @@
     <div class="why-us__header">
       <h1>ПОЧЕМУ <span>МЫ?</span></h1>
     </div>
-    <div class="why-us__text">
+    <div class="why-us__text fade-in">
       <p>
         ДИЗАЙН ДЛЯ НАС - ЭТО НЕ ПРО БИЗНЕС, А<span> ПРО МИССИЮ </span>
       </p>
@@ -153,7 +162,7 @@
   </section>
 
   <section class="review">
-  <div class="review__container">
+  <div class="review__container fade-in">
     <h1 class="container review__title">ОТЗЫВЫ</h1>
 
     <div class="swiper review__swiper">
@@ -233,7 +242,7 @@
     <h1 class="eight-steps__header">8 ШАГОВ<span> К НОВОМУ ПРОСТРАНСТВУ</span></h1>
     <div class="column-container">
       <div class="column-container__column">
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             01
           </h1>
@@ -244,7 +253,7 @@
             <p>Предпочитаем встречаться вживую, чтобы лучше прочувствовать клиента и его задачи</p>
           </div>
         </div>
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             <span>
               02
@@ -258,7 +267,7 @@
               и иных условий</p>
           </div>
         </div>
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             03
           </h1>
@@ -269,7 +278,7 @@
             <p>Детально формируем задачи, подробно изучаем объект</p>
           </div>
         </div>
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             04
           </h1>
@@ -282,7 +291,7 @@
         </div>
       </div>
       <div class="column-container__column">
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             05
           </h1>
@@ -293,7 +302,7 @@
             <p>Позволяет реалистично представить конечный результат проекта</p>
           </div>
         </div>
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             06
           </h1>
@@ -304,7 +313,7 @@
             <p>Детально-техническая документация, которая дает инструкцию как превратить картинку в жизнь</p>
           </div>
         </div>
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             <span>
               07
@@ -318,7 +327,7 @@
               идеальный результат.</p>
           </div>
         </div>
-        <div class="eight-steps-flexbox">
+        <div class="eight-steps-flexbox fade-in">
           <h1>
             08
           </h1>
@@ -340,7 +349,7 @@
       <h1 class="services__title container">УСЛУГИ <span class="services__title-light">И СТОИМОСТЬ</span></h1>
 
       <div class="services__list container">
-        <div class="services__item">
+        <div class="services__item fade-in-x-left">
           <img src="../img/studio-design/services/img1.png" alt="Дизайн-проект" class="services__image">
           <div class="services__content">
             <h2 class="services__item-title">Дизайн-проект</h2>
@@ -349,7 +358,7 @@
           <button class="button button--primary service-button-more">Заказать</button>
         </div>
 
-        <div class="services__item">
+        <div class="services__item fade-in-x-left">
           <img src="../img/studio-design/services/img2.png" alt="Авторский надзор" class="services__image">
           <div class="services__content">
             <h2 class="services__item-title">Авторский надзор, комплектация</h2>
@@ -358,7 +367,7 @@
           <button class="button button--primary service-button-more">Заказать</button>
         </div>
 
-        <div class="services__item">
+        <div class="services__item fade-in-x-left">
           <img src="../img/studio-design/services/img3.png" alt="Ландшафтный дизайн" class="services__image">
           <div class="services__content">
             <h2 class="services__item-title">Ландшафтный дизайн</h2>
@@ -367,7 +376,7 @@
           <button class="button button--primary service-button-more">Заказать</button>
         </div>
 
-        <div class="services__item">
+        <div class="services__item fade-in-x-left">
           <img src="../img/studio-design/services/img4.png" alt="Проектирование" class="services__image">
           <div class="services__content">
             <h2 class="services__item-title">Проектирование предметов интерьера, мебели, арт-объектов</h2>
@@ -376,7 +385,7 @@
           <button class="button button--primary service-button-more">Заказать</button>
         </div>
 
-        <div class="services__item">
+        <div class="services__item fade-in-x-left">
           <img src="../img/studio-design/services/img5.png" alt="Архитектурный проект" class="services__image">
           <div class="services__content">
             <h2 class="services__item-title">Архитектурный проект</h2>
@@ -385,7 +394,7 @@
           <button class="button button--primary service-button-more">Заказать</button>
         </div>
 
-        <div class="services__item">
+        <div class="services__item fade-in-x-left">
           <img src="../img/studio-design/services/img6.png" alt="Консультация" class="services__image">
           <div class="services__content">
             <h2 class="services__item-title">Разовая консультация</h2>
@@ -400,10 +409,10 @@
   <section class="container investitions">
     <h1 class="investitions__header">ИНВЕСТИЦИОННЫЕ ОБЪЕКТЫ</h1>
   
-    <div class="investitions__container">
+    <div class="investitions__container fade-in-x-left">
       <img class="investitions__image" src="../img/studio-design/investitions/investitions-img.png" alt="Инвестиционные объекты">
       <div class="investitions__text-container">
-        <div class="investitions__content">
+        <div class="investitions__content fade-in-x-right">
           <p><span>Понимаем рынок и знаем</span> как создать <span>уникальный</span> визуальный образ, который повысит ценность объекта с минимальными вложениями.</p>
           <p>Профессиональная команда подберет привлекательный объект для инвестиций, составит бизнес-стратегию, <span>сделает «продающий» ремонт и найдет клиента.</span></p>
         </div>
@@ -418,6 +427,7 @@
 
   <button id="back-to-top" title="Вернуться наверх"></button>
   <include src="./components/footer.html"></include>
+  </div>
 </body>
 
 </html>
