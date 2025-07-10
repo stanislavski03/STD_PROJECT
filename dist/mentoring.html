@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>НАСТАВНИЧЕСТВО</title>
-<script defer src="/bundle.js"></script><link href="/main.cadff696263b8f92905e.css" rel="stylesheet"></head>
+<script defer src="/bundle.js"></script><link href="/main.a375e5ac4881709e0cf7.css" rel="stylesheet"></head>
 
 <body>
   <div id="preloader">
@@ -398,7 +398,34 @@
             <img src="/img/application_person.png" alt="" class="application__image">
         </section>
     </div>
-<script type="module" src="/ffa789192f5a3b9e7b02.js"></script>
+
+    <!-- Модальное окно -->
+
+
+    <div id="errorModal" class="modal modal--error">
+        <div class="modal__content">
+            <h3 class="modal__title">Ошибка</h3>
+            <p id="errorMessage" class="modal__message"></p>
+            <button class="modal__button modal__button--error">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal modal--success">
+        <div class="modal__content">
+            <h3 class="modal__title">Успех!</h3>
+            <p class="modal__message">Форма успешно отправлена!</p>
+            <button class="modal__button modal__button--success">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="loadingModal" class="modal" style="display: none;">
+        <div class="modal__content">
+            <div class="loader"></div>
+            <p class="modal__message">Отправка данных...</p>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
@@ -447,8 +474,34 @@
 
   </div>
 
-  <script type="module" src="/c76bc7e958b0569328a2.js"></script>
-  <script type="module" src="/8814111ca599b245faf2.js"></script>
+
+
+  <!-- Модальное окно -->
+
+
+  <div id="errorModal" class="modal modal--error">
+    <div class="modal__content">
+      <h3 class="modal__title">Ошибка</h3>
+      <p id="errorMessage" class="modal__message"></p>
+      <button class="modal__button modal__button--error">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="successModal" class="modal modal--success">
+    <div class="modal__content">
+      <h3 class="modal__title">Успех!</h3>
+      <p class="modal__message">Форма успешно отправлена!</p>
+      <button class="modal__button modal__button--success">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="loadingModal" class="modal" style="display: none;">
+    <div class="modal__content">
+      <div class="loader"></div>
+      <p class="modal__message">Отправка данных...</p>
+    </div>
+  </div>
+
 </body>
 
 </html>
