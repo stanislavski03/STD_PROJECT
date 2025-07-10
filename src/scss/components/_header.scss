@@ -183,6 +183,8 @@
         &__contact-button {
             padding: 8px 25px;
             font-size: 14px;
+            min-width: min-content;
+            width: auto;
         }
         &__phone-link {
             display: none;
@@ -202,7 +204,10 @@
         }
 
         &__contact-button {
-            padding: 6px 15px;
+            padding: 6px 12px;
+            min-width: min-content;
+            width: auto;
+            font-size: 12px;
         }
 
         &__logo-image {
@@ -217,7 +222,24 @@
         }
 
         &__contact-button {
+            padding: 5px 10px;
+            min-width: min-content;
+            width: auto;
             font-size: 12px;
+            white-space: pre-line; // Изменено с nowrap на pre-line
+            text-align: center;
+            line-height: 1.2;
+            &::before {
+                content: "Связаться\Aс нами";
+                white-space: pre;
+            }
+            span {
+                display: none;
+            }
+        }
+
+        &__logo-image {
+            height: 45px;
         }
     }
 }

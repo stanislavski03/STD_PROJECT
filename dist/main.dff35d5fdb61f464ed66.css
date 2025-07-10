@@ -755,6 +755,8 @@ body {
   .header__contact-button {
     padding: 8px 25px;
     font-size: 14px;
+    min-width: min-content;
+    width: auto;
   }
   .header__phone-link {
     display: none;
@@ -768,7 +770,10 @@ body {
     display: none;
   }
   .header__contact-button {
-    padding: 6px 15px;
+    padding: 6px 12px;
+    min-width: min-content;
+    width: auto;
+    font-size: 12px;
   }
   .header__logo-image {
     height: 50px;
@@ -779,7 +784,23 @@ body {
     display: none;
   }
   .header__contact-button {
+    padding: 5px 10px;
+    min-width: min-content;
+    width: auto;
     font-size: 12px;
+    white-space: pre-line;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .header__contact-button::before {
+    content: "Связаться\aс нами";
+    white-space: pre;
+  }
+  .header__contact-button span {
+    display: none;
+  }
+  .header__logo-image {
+    height: 45px;
   }
 }
 
