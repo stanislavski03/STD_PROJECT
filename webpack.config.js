@@ -123,6 +123,7 @@ module.exports = {
     },
     hot: false,
     open: true,
+    liveReload: true,
     devMiddleware: {
       writeToDisk: true
     },

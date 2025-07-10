@@ -1,15 +1,16 @@
 import '../scss/main.scss';
 import 'swiper/css/bundle';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import { Fancybox } from '@fancyapps/ui';
+window.Fancybox = Fancybox; // Делаем глобально доступным
 import './salon_map';
 import './salon_swiper';
 import './design-studio_review';
 import './header';
-import './course_program_form'
-import './application_form'
-import './cooperation_form'
-import './expectations_blocks'
 import './observer'
 import './scroll-container'
+import './forms_handler'
+
 
 
 
