@@ -45,6 +45,7 @@
         margin-bottom: 2.5rem;
         font-size: 1.1rem;
         line-height: 1.6;
+
     }
 
     &__button {
@@ -137,19 +138,24 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .custom-fancybox {
     .fancybox__content {
         padding: 0;
     }
-    
+
     .fancybox__toolbar {
         display: none;
     }
-    
+
     .fancybox__nav {
         display: none;
     }
@@ -157,6 +163,10 @@
 
 .form-errors {
     margin-bottom: 15px;
+
+    @include respond-to('laptop') {
+        margin-bottom: 0;
+    }
 }
 
 .form-error {
@@ -164,8 +174,15 @@
     padding: 8px 12px;
     background: rgba(217, 83, 79, 0.1);
     border-radius: 4px;
-    margin-bottom: 10px;
     font-size: 0.9rem;
+
+    @include respond-to('big_laptop') {
+        font-size: 0.7rem;
+    }
+
+    @include respond-to('laptop') {
+        font-size: 0.4rem;
+    }
 }
 
 .input-error {
