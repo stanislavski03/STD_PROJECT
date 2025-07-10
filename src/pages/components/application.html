@@ -16,12 +16,40 @@
                 <input type="tel" id="application__form__phone" placeholder="Телефон">
                 <input type="text" id="application__form__comment" placeholder="Комментарий">
                 <button type="submit" class="button button--secondary application__form__submit_btn">Отправить</button>
-                <button class="button button--primary application__form__q_btn"><img src="../img/application/application_icon.svg" alt="">Есть вопросы? Напишите нам!</button>
+                <button class="button button--primary application__form__q_btn"><img
+                        src="../img/application/application_icon.svg" alt="">Есть вопросы? Напишите нам!</button>
             </form>
             <img src="../img/application/application_person.png" alt="" class="application__image">
         </section>
     </div>
-<script type="module" src="../js/application_form.js"></script>
+
+    <!-- Модальное окно -->
+
+
+    <div id="errorModal" class="modal modal--error">
+        <div class="modal__content">
+            <h3 class="modal__title">Ошибка</h3>
+            <p id="errorMessage" class="modal__message"></p>
+            <button class="modal__button modal__button--error">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal modal--success">
+        <div class="modal__content">
+            <h3 class="modal__title">Успех!</h3>
+            <p class="modal__message">Форма успешно отправлена!</p>
+            <button class="modal__button modal__button--success">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="loadingModal" class="modal" style="display: none;">
+        <div class="modal__content">
+            <div class="loader"></div>
+            <p class="modal__message">Отправка данных...</p>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

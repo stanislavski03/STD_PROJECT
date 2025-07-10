@@ -57,6 +57,7 @@
                 "block10 block11 block11";
 
         }
+        
 
         @include respond-to('middle_mobile') {
             font-size: 8px;
