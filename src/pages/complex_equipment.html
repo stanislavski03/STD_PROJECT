@@ -8,9 +8,18 @@
 </head>
 
 <body>
+
+  <div id="preloader">
+    <img src="../img/preloader/preloader_logo.svg" alt="Логотип" class="preloader__logo">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  <div id="content" style="display: none;">
+
   <include src="./components//header.html"></include>
 
-  <section class="container complex-equipment">
+  <section class="container complex-equipment fade-in">
     <h1>
       КОМПЛЕКСНОЕ ОСНАЩЕНИЕ
     </h1>
@@ -23,7 +32,7 @@
   </section>
 
 
-  <section class="container equipment-info">
+  <section class="container equipment-info fade-in-x-left">
     <div class="equipment-info__flexbox">
       <img src="../img/complex-equipment/«.svg">
       <h1>Мы — эксперты в стройке и создании интерьеров.</h1>
@@ -38,7 +47,7 @@
 
 
   <section class="container equipment-more">
-    <div class="equipment-more__container">
+    <div class="equipment-more__container fade-in-x-left">
       <img src="../img/complex-equipment/more3.png">
       <h1>
         Сеть мебельных салонов
@@ -52,7 +61,7 @@
       </button>
     </div>
 
-    <div class="equipment-more__container">
+    <div class="equipment-more__container fade-in">
       <img src="../img/complex-equipment/more2.png">
       <h1>
         Комплектация объектов
@@ -66,7 +75,7 @@
       </button>
     </div>
     
-    <div class="equipment-more__container">
+    <div class="equipment-more__container fade-in-x-right">
       <img src="../img/complex-equipment/more1.png">
       <h1>
         Интерьерный декор 
@@ -86,6 +95,8 @@
   <include src="./components//application-minimal.html"></include>
   <button id="back-to-top" title="Вернуться наверх"></button>
   <include src="./components/footer.html"></include>
+
+  </div>
 </body>
 
 </html>
