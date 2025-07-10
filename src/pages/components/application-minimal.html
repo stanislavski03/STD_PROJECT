@@ -20,7 +20,35 @@
             <img src="../img/application/application_person1.png" alt="" class="application__image-minimal">
         </section>
     </div>
-<script type="module" src="../js/application_form.js"></script>
+
+
+    <!-- Модальное окно -->
+
+
+    <div id="errorModal" class="modal modal--error">
+        <div class="modal__content">
+            <h3 class="modal__title">Ошибка</h3>
+            <p id="errorMessage" class="modal__message"></p>
+            <button class="modal__button modal__button--error">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal modal--success">
+        <div class="modal__content">
+            <h3 class="modal__title">Успех!</h3>
+            <p class="modal__message">Форма успешно отправлена!</p>
+            <button class="modal__button modal__button--success">Закрыть</button>
+        </div>
+    </div>
+
+    <div id="loadingModal" class="modal" style="display: none;">
+        <div class="modal__content">
+            <div class="loader"></div>
+            <p class="modal__message">Отправка данных...</p>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
