@@ -21,14 +21,14 @@
 
     &--face {
       position: absolute;
-      width: 90%;
+      width: 800px;
       right: -100px;
-      bottom: -25%;
+      bottom: -200px;
       margin-left: 18vw;
       z-index: 1;
 
       @include respond-to('big_laptop'){
-        width: 120%;
+        width: 800px;
         bottom: -15%;
       }
 
@@ -60,7 +60,7 @@
 
   &__header {
     margin-bottom: 3rem;
-    transform: translateX(-15rem);
+    transform: translateX(-200px);
   }
 
   &__title {
@@ -75,7 +75,7 @@
     }
 
     @include respond-to('tablet'){
-      font-size: 2rem;
+      font-size: 3rem;
     }
   }
 
@@ -100,12 +100,12 @@
       font-size: 1.3rem;
     }
     @include respond-to('tablet'){
-      font-size: 1.3rem;
+      font-size: 1.6rem;
     }
   }
 
   &__description {
-    width: 70%;
+    width: 600px;
     padding-left: 100px;
     p {
       font-size: 1.2rem;

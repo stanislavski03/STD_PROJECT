@@ -51,6 +51,7 @@
     }
 
     &__text-container {
+        align-items: center;
         color: white;
         text-align: start;
         display: flex;
@@ -66,6 +67,7 @@
     }
 
     &__content {
+        max-width: 800px;
         font-size: 1.3rem;
         font-family:  Muller-Trial-Regular;
         
@@ -75,12 +77,26 @@
         }
 
         @include respond-to('big_mobile') {
-            font-size: 1rem
+            font-size: 1rem;
+            width: 200px;
         }
+
         @include respond-to('small_mobile') {
-            font-size: 0.9rem
+            font-size: 0.9rem;
+            width: 300px;
+        }
+        @include respond-to('tablet'){
+            width: 400px;
+        }
+
+        @include respond-to('big_laptop') {
+            width: 600px;
+        }
+        @include respond-to('before_desktop') {
+            width: 600px;
         }
     }
+
 
     &__button {
         @include transparent-button;
